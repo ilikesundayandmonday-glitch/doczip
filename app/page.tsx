@@ -54,7 +54,7 @@ export default function Home() {
           <Row num="01" title="공고문 AI 요약" desc="핵심 조건과 제출 서류를 자동 정리" status="soon" href={null} />
           <Row num="02" title="HWP 변환" desc="한글 파일을 PDF·Word로" status="wip" href={null} />
           <Row num="03" title="서류 용량 줄이기" desc="5MB 업로드 제한 맞추기" status="live" href="/compress" />
-          <Row num="04" title="제출 서류 합치기" desc="여러 PDF를 하나로" status="wip" href={null} />
+          <Row num="04" title="제출 서류 합치기" desc="PDF·사진을 하나로" status="live" href="/merge" />
         </div>
       </section>
 
