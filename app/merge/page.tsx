@@ -86,7 +86,7 @@ export default function MergePage() {
       }
 
       const mergedBytes = await merged.save();
-      const blob = new Blob([mergedBytes], { type: "application/pdf" });
+      const blob = new Blob([mergedBytes as BlobPart], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
