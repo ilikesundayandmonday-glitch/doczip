@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import Nav from "./components/Nav";
+import ScrollTop from "./components/ScrollTop";
 
 export const metadata: Metadata = {
-  title: "Doczip - 정부지원사업 AI 어시스턴트",
+  title: "DocZip - 정부지원사업 서류 준비 도우미",
   description: "공고문 분석부터 서류 준비까지, 정부지원사업에 필요한 모든 도구",
 };
 
@@ -23,7 +25,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <Nav />
         {children}
+        <ScrollTop />
         <Analytics />
       </body>
     </html>
