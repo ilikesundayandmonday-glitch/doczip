@@ -78,10 +78,10 @@ export default function CompressPage() {
         </Link>
 
         <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">
-          이미지 압축
+          서류 용량 줄이기
         </h1>
         <p className="text-gray-500 text-center mb-8">
-          🔒 파일은 서버에 저장되지 않습니다
+          5MB 제한 맞추기 · 파일은 서버에 저장되지 않습니다
         </p>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-8">
@@ -93,7 +93,7 @@ export default function CompressPage() {
             onDragLeave={() => setDragging(false)}
             onDrop={handleDrop}
             className={`block border-2 border-dashed rounded-xl p-10 text-center cursor-pointer transition mb-6
-              ${dragging ? "border-blue-500 bg-blue-50" : "border-gray-300 hover:border-blue-400"}`}
+              ${dragging ? "border-[#1D9E75] bg-green-50" : "border-gray-300 hover:border-[#1D9E75]"}`}
           >
             <input
               type="file"
@@ -106,7 +106,7 @@ export default function CompressPage() {
                 <span className="font-medium text-gray-800">{originalFile.name}</span>
               ) : (
                 <>
-                  <div className="text-lg mb-1">📁 파일을 끌어다 놓거나 클릭</div>
+                  <div className="text-lg mb-1">파일을 끌어다 놓거나 클릭</div>
                   <div className="text-sm text-gray-400">이미지 파일 (JPG, PNG 등)</div>
                 </>
               )}
@@ -126,7 +126,7 @@ export default function CompressPage() {
                   step="0.1"
                   value={quality}
                   onChange={(e) => setQuality(parseFloat(e.target.value))}
-                  className="w-full"
+                  className="w-full accent-[#1D9E75]"
                 />
                 <div className="flex justify-between text-xs text-gray-400 mt-1">
                   <span>용량 우선</span>
@@ -137,8 +137,8 @@ export default function CompressPage() {
               <button
                 onClick={handleCompress}
                 disabled={loading}
-                className="w-full bg-blue-500 text-white rounded-xl py-3 font-medium
-                  hover:bg-blue-600 disabled:bg-gray-300 transition mb-4"
+                className="w-full bg-[#1D9E75] text-white rounded-xl py-3 font-medium
+                  hover:bg-[#178a66] disabled:bg-gray-300 transition mb-4"
               >
                 {loading ? "압축 중..." : "압축하기"}
               </button>
@@ -154,21 +154,25 @@ export default function CompressPage() {
               <div className="text-sm text-gray-700 mb-1">
                 압축 후: {formatSize(compressedFile.size)}
               </div>
-              <div className="text-sm font-medium text-green-600 mb-3">
+              <div className="text-sm font-medium text-[#1D9E75] mb-3">
                 {Math.round(
                   (1 - compressedFile.size / (originalFile?.size || 1)) * 100
                 )}
-                % 감소 🎉
+                % 감소
               </div>
               <button
                 onClick={handleDownload}
-                className="w-full bg-green-500 text-white rounded-xl py-3 font-medium hover:bg-green-600 transition"
+                className="w-full bg-gray-900 text-white rounded-xl py-3 font-medium hover:bg-gray-700 transition"
               >
                 다운로드
               </button>
             </div>
           )}
         </div>
+
+        <p className="text-center text-xs text-gray-400 mt-6">
+          압축은 브라우저에서 처리되며, 이미지는 어디에도 전송되지 않습니다.
+        </p>
       </div>
     </main>
   );
