@@ -115,13 +115,19 @@ export default function Home() {
       </section>
 
       <footer className="px-6 py-10 border-t border-gray-200">
-        <p className="text-center text-sm text-gray-400">
-          © 2026 DocZip. 한국 문서 행정을 더 쉽게.
-        </p>
+        <div className="flex flex-col items-center gap-3">
+          <Link href="/privacy" className="text-sm text-gray-500 hover:text-gray-800 transition">
+            개인정보처리방침
+          </Link>
+          <p className="text-center text-sm text-gray-400">
+            © 2026 DocZip. 한국 문서 행정을 더 쉽게.
+          </p>
+        </div>
       </footer>
     </main>
   );
 }
+
 function Tool({ href, title, desc, event }: { href: string; title: string; desc: string; event: string }) {
   return (
     <Link href={href} onClick={() => track(event)} className="block bg-white border border-gray-200 rounded-2xl p-7 hover:border-[#1D9E75] hover:shadow-md transition">
