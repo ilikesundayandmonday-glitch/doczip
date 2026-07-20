@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 import WaveBackground from "./components/WaveBackground";
 
 export default function Home() {
@@ -28,9 +31,8 @@ export default function Home() {
                 <p className="text-base sm:text-lg text-[#A8B2AC] max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed">
                   통장사본·사업자등록증 같은 사진도 PDF로. 브라우저에서 바로 처리하고, 파일은 서버에 저장되지 않아요.
                 </p>
-
                 <div className="flex justify-center md:justify-start mb-8">
-                  <a href="#tools" className="bg-[#4ADE80] text-[#0C1610] text-lg font-bold px-10 py-5 rounded-2xl hover:bg-[#3bc46d] transition shadow-lg shadow-[#4ADE80]/20">
+                  <a href="#tools" onClick={() => track("무료로_시작하기_클릭")} className="bg-[#4ADE80] text-[#0C1610] text-lg font-bold px-10 py-5 rounded-2xl hover:bg-[#3bc46d] transition shadow-lg shadow-[#4ADE80]/20">
                     무료로 시작하기 →
                   </a>
                 </div>
@@ -72,16 +74,8 @@ export default function Home() {
           어떤 작업을 도와드릴까요?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Tool
-            href="/compress"
-            title="서류 용량 줄이기"
-            desc="5MB 업로드 제한에 걸릴 때. 이미지 용량을 줄여 규격에 맞춰요."
-          />
-          <Tool
-            href="/merge"
-            title="제출 서류 합치기"
-            desc="PDF와 사진(통장사본·사업자등록증)을 원하는 순서대로 하나의 PDF로."
-          />
+          <Tool href="/compress" title="서류 용량 줄이기" desc="5MB 업로드 제한에 걸릴 때. 이미지 용량을 줄여 규격에 맞춰요." event="도구클릭_압축" />
+          <Tool href="/merge" title="제출 서류 합치기" desc="PDF와 사진(통장사본·사업자등록증)을 원하는 순서대로 하나의 PDF로." event="도구클릭_합치기" />
         </div>
 
         <div className="text-xs tracking-[0.2em] text-gray-400 font-medium mb-4 mt-16">
@@ -128,13 +122,9 @@ export default function Home() {
     </main>
   );
 }
-
-function Tool({ href, title, desc }: { href: string; title: string; desc: string }) {
+function Tool({ href, title, desc, event }: { href: string; title: string; desc: string; event: string }) {
   return (
-    <Link
-      href={href}
-      className="block bg-white border border-gray-200 rounded-2xl p-7 hover:border-[#1D9E75] hover:shadow-md transition"
-    >
+    <Link href={href} onClick={() => track(event)} className="block bg-white border border-gray-200 rounded-2xl p-7 hover:border-[#1D9E75] hover:shadow-md transition">
       <div className="flex items-center justify-between mb-3">
         <p className="text-lg font-bold text-gray-900">{title}</p>
         <span className="text-xs text-green-600 whitespace-nowrap">● 사용 가능</span>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { PDFDocument } from "pdf-lib";
+import { track } from "@vercel/analytics";
 
 type Item = { file: File; id: string; kind: "pdf" | "image" };
 
@@ -30,6 +31,7 @@ export default function MergePage() {
       return;
     }
     setItems((prev) => [...prev, ...accepted]);
+    track("합치기_파일올림");
   };
 
   const removeItem = (id: string) => {
@@ -45,7 +47,6 @@ export default function MergePage() {
       return next;
     });
   };
-
   const handleMerge = async () => {
     if (items.length < 1) {
       alert("파일을 올려주세요.");
@@ -93,6 +94,7 @@ export default function MergePage() {
       a.download = "제출서류.pdf";
       a.click();
       URL.revokeObjectURL(url);
+      track("합치기_다운로드");
     } catch (error) {
       console.error(error);
       alert("합치는 중 오류가 발생했습니다. 파일이 손상되지 않았는지 확인해주세요.");
@@ -105,18 +107,14 @@ export default function MergePage() {
     if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + " KB";
     return (bytes / (1024 * 1024)).toFixed(2) + " MB";
   };
-
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col items-center py-16 px-4">
       <div className="w-full max-w-xl">
-        <Link
-          href="/"
-          className="inline-flex items-center text-gray-500 hover:text-gray-800 mb-6 transition"
-        >
+        <Link href="/" className="inline-flex items-center text-gray-500 hover:text-gray-800 mb-6 transition">
           ← 홈으로
         </Link>
 
-        <h1 className="text-3xl font-semibold text-gray-900 mb-2 text-center">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">
           제출 서류 합치기
         </h1>
         <p className="text-gray-500 text-center mb-8">
@@ -125,44 +123,23 @@ export default function MergePage() {
 
         <div className="bg-white border border-gray-200 rounded-2xl p-8">
           <label
-            onDragOver={(e) => {
-              e.preventDefault();
-              setDragging(true);
-            }}
+            onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
             onDragLeave={() => setDragging(false)}
-            onDrop={(e) => {
-              e.preventDefault();
-              setDragging(false);
-              addFiles(e.dataTransfer.files);
-            }}
-            className={`block border-2 border-dashed rounded-xl p-10 text-center cursor-pointer transition mb-6
-              ${dragging ? "border-[#1D9E75] bg-green-50" : "border-gray-300 hover:border-[#1D9E75]"}`}
+            onDrop={(e) => { e.preventDefault(); setDragging(false); addFiles(e.dataTransfer.files); }}
+            className={`block border-2 border-dashed rounded-xl p-10 text-center cursor-pointer transition mb-6 ${dragging ? "border-[#1D9E75] bg-green-50" : "border-gray-300 hover:border-[#1D9E75]"}`}
           >
-            <input
-              type="file"
-              accept="application/pdf,image/jpeg,image/png"
-              multiple
-              onChange={(e) => addFiles(e.target.files)}
-              className="hidden"
-            />
+            <input type="file" accept="application/pdf,image/jpeg,image/png" multiple onChange={(e) => addFiles(e.target.files)} className="hidden" />
             <div className="text-gray-600">
               <div className="text-lg mb-1">PDF·사진을 끌어다 놓거나 클릭</div>
-              <div className="text-sm text-gray-400">
-                통장사본·사업자등록증 사진도 자동으로 정리돼요
-              </div>
+              <div className="text-sm text-gray-400">통장사본·사업자등록증 사진도 자동으로 정리돼요</div>
             </div>
           </label>
 
           {items.length > 0 && (
             <div className="flex flex-col gap-2 mb-6">
               {items.map((item, index) => (
-                <div
-                  key={item.id}
-                  className="flex items-center gap-3 border border-gray-200 rounded-lg px-4 py-3"
-                >
-                  <span className="text-sm text-[#1D9E75] font-medium tabular-nums w-5">
-                    {index + 1}
-                  </span>
+                <div key={item.id} className="flex items-center gap-3 border border-gray-200 rounded-lg px-4 py-3">
+                  <span className="text-sm text-[#1D9E75] font-medium tabular-nums w-5">{index + 1}</span>
                   <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
                     {item.kind === "pdf" ? "PDF" : "사진"}
                   </span>
@@ -171,29 +148,9 @@ export default function MergePage() {
                     <p className="text-xs text-gray-400">{formatSize(item.file.size)}</p>
                   </div>
                   <div className="flex items-center gap-1 shrink-0">
-                    <button
-                      onClick={() => move(index, -1)}
-                      disabled={index === 0}
-                      className="w-7 h-7 rounded-md border border-gray-200 text-gray-500 hover:bg-gray-50 disabled:opacity-30 transition"
-                      aria-label="위로"
-                    >
-                      ↑
-                    </button>
-                    <button
-                      onClick={() => move(index, 1)}
-                      disabled={index === items.length - 1}
-                      className="w-7 h-7 rounded-md border border-gray-200 text-gray-500 hover:bg-gray-50 disabled:opacity-30 transition"
-                      aria-label="아래로"
-                    >
-                      ↓
-                    </button>
-                    <button
-                      onClick={() => removeItem(item.id)}
-                      className="w-7 h-7 rounded-md border border-gray-200 text-red-400 hover:bg-red-50 transition"
-                      aria-label="삭제"
-                    >
-                      ×
-                    </button>
+                    <button onClick={() => move(index, -1)} disabled={index === 0} className="w-7 h-7 rounded-md border border-gray-200 text-gray-500 hover:bg-gray-50 disabled:opacity-30 transition" aria-label="위로">↑</button>
+                    <button onClick={() => move(index, 1)} disabled={index === items.length - 1} className="w-7 h-7 rounded-md border border-gray-200 text-gray-500 hover:bg-gray-50 disabled:opacity-30 transition" aria-label="아래로">↓</button>
+                    <button onClick={() => removeItem(item.id)} className="w-7 h-7 rounded-md border border-gray-200 text-red-400 hover:bg-red-50 transition" aria-label="삭제">×</button>
                   </div>
                 </div>
               ))}
@@ -201,11 +158,7 @@ export default function MergePage() {
           )}
 
           {items.length > 0 && (
-            <button
-              onClick={handleMerge}
-              disabled={loading}
-              className="w-full bg-[#1D9E75] text-white rounded-xl py-3 font-medium hover:bg-[#178a66] disabled:bg-gray-300 transition"
-            >
+            <button onClick={handleMerge} disabled={loading} className="w-full bg-[#1D9E75] text-white rounded-xl py-3 font-medium hover:bg-[#178a66] disabled:bg-gray-300 transition">
               {loading ? "합치는 중..." : `${items.length}개 합쳐서 다운로드`}
             </button>
           )}
