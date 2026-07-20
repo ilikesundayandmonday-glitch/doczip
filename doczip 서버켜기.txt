@@ -1,0 +1,22 @@
+[서버 켜기]
+
+cd ~/Desktop/doczip
+npm run dev
+
+
+
+
+[서버 끄기]
+
+Ctrl + c
+
+
+
+[서버 접속]
+
+localhost:3000
+
+
+
+[새 터미널 탭]
+Cmd + T
