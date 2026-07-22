@@ -5,8 +5,8 @@ import Nav from "./components/Nav";
 import ScrollTop from "./components/ScrollTop";
 
 export const metadata: Metadata = {
-  title: "DocZip - 정부지원사업 서류 준비 도우미",
-  description: "공고문 분석부터 서류 준비까지, 정부지원사업에 필요한 모든 도구",
+  title: "ZipperDoc - 정부지원사업 서류 준비 도우미",
+  description: "지원사업 서류, 용량 줄이기부터 합치기까지. 설치 없이 무료로.",
 };
 
 export default function RootLayout({

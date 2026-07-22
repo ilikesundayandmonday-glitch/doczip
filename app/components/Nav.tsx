@@ -20,9 +20,9 @@ export default function Nav() {
         </div>
 
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/DOCZIPlogo.png" alt="DocZip" width={38} height={38} className="rounded-lg" />
+          <Image src="/DOCZIPlogo.png" alt="ZipperDoc" width={38} height={38} className="rounded-lg" />
           <span className="text-lg font-bold text-[#FAFBFA]">
-            Doc<span className="text-[#4ADE80]">Zip</span>
+            Zipper<span className="text-[#4ADE80]">Doc</span>
           </span>
         </Link>
       </div>

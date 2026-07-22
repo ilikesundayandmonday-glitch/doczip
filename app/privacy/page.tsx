@@ -9,12 +9,12 @@ export default function PrivacyPage() {
         </Link>
 
         <h1 className="text-3xl font-bold text-gray-900 mb-2">개인정보처리방침</h1>
-        <p className="text-sm text-gray-400 mb-10">최종 수정일: 2026년 7월 20일</p>
+        <p className="text-sm text-gray-400 mb-10">최종 수정일: 2026년 7월 21일</p>
 
         <div className="flex flex-col gap-8 text-gray-700 leading-relaxed">
           <section>
             <p>
-              DocZip(이하 &lsquo;서비스&rsquo;)은 이용자의 개인정보를 소중히 여기며, 관련 법령을 준수합니다.
+              ZipperDoc(이하 &lsquo;서비스&rsquo;)은 이용자의 개인정보를 소중히 여기며, 관련 법령을 준수합니다.
               본 방침은 서비스가 어떤 정보를 어떻게 다루는지 설명합니다.
             </p>
           </section>
@@ -47,7 +47,6 @@ export default function PrivacyPage() {
               서비스는 이용 통계 분석을 위해 쿠키를 사용할 수 있습니다. 또한 향후 Google AdSense 등
               제3자 광고 서비스를 도입할 경우, 해당 서비스가 광고 제공을 위해 쿠키를 사용할 수 있습니다.
               이용자는 브라우저 설정에서 쿠키를 거부할 수 있으며, 이 경우 일부 기능이 제한될 수 있습니다.
-              Google의 광고 쿠키 정책은 Google 광고 정책 페이지에서 확인할 수 있습니다.
             </p>
           </section>
 
@@ -65,10 +64,8 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">5. 개인정보 보호책임자</h2>
-            <p>
-              개인정보 관련 문의는 아래로 연락 주시기 바랍니다.
-            </p>
-            <p className="mt-2 text-gray-600">이메일: ilikesundayandmonday@gmail.com</p>
+            <p>개인정보 관련 문의는 아래로 연락 주시기 바랍니다.</p>
+            <p className="mt-2 text-gray-600">이메일: zipperdochelp@gmail.com</p>
           </section>
 
           <section>
