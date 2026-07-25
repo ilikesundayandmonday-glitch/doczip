@@ -77,8 +77,15 @@ export default function Home() {
           <SoonRow title="공고문 AI 요약" desc="공고문을 올리면 조건·제출 서류·마감일을 자동 정리" />
           <SoonRow title="HWP 변환" desc="한글(HWP) 파일을 PDF로 변환" />
         </div>
-      </section>
 
+        <div className="mt-16">
+          <Link href="/guide" className="block bg-[#1C1F1D] rounded-2xl p-7 hover:bg-[#252927] transition">
+            <div className="text-xs tracking-[0.2em] text-[#4ADE80] font-medium mb-2">가이드</div>
+            <p className="text-lg font-bold text-[#FAFBFA] mb-2">정부지원사업 서류 제출 가이드 →</p>
+            <p className="text-sm text-[#A8B2AC] leading-relaxed">용량 줄이기부터 PDF 합치기까지, 서류 준비 방법을 정리했어요.</p>
+          </Link>
+        </div>
+      </section>
       <section className="px-6 py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-xs tracking-[0.2em] text-[#1D9E75] font-medium mb-2 text-center">HOW IT WORKS</div>
