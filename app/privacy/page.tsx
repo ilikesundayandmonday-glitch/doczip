@@ -9,7 +9,7 @@ export default function PrivacyPage() {
         </Link>
 
         <h1 className="text-3xl font-bold text-gray-900 mb-2">개인정보처리방침</h1>
-        <p className="text-sm text-gray-400 mb-10">최종 수정일: 2026년 7월 21일</p>
+        <p className="text-sm text-gray-400 mb-10">최종 수정일: 2026년 7월 25일</p>
 
         <div className="flex flex-col gap-8 text-gray-700 leading-relaxed">
           <section>
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">5. 개인정보 보호책임자</h2>
             <p>개인정보 관련 문의는 아래로 연락 주시기 바랍니다.</p>
-            <p className="mt-2 text-gray-600">이메일: zipperdochelp@gmail.com</p>
+            <p className="mt-2 text-gray-600">이메일: zipperdoc.help@gmail.com</p>
           </section>
 
           <section>
