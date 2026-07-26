@@ -52,6 +52,7 @@ export default function GuidePage() {
               <Link href="/merge" className="text-[#1D9E75] font-medium underline">ZipperDoc 제출 서류 합치기</Link>는 PDF와 사진을 한 번에 합칠 수 있습니다. 사진은 자동으로 A4 크기에 맞춰 정렬되고, 원하는 순서대로 배치해 하나의 PDF로 다운로드할 수 있습니다.
             </p>
           </section>
+
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">3. 통장사본·사업자등록증 사진 처리하기</h2>
             <p className="mb-3">
@@ -64,7 +65,6 @@ export default function GuidePage() {
               <li>완성된 PDF를 제출 시스템에 업로드합니다.</li>
             </ol>
           </section>
-
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">자주 묻는 질문</h2>
             <div className="flex flex-col gap-5">
@@ -98,6 +98,14 @@ export default function GuidePage() {
                 제출 서류 합치기
               </Link>
             </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">관련 가이드</h2>
+            <Link href="/guide/bankbook-pdf" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+              <p className="font-bold text-gray-900 mb-1">통장사본·사업자등록증을 하나의 PDF로 합치는 법 →</p>
+              <p className="text-sm text-gray-500">사진과 PDF를 한 번에 합치고 A4로 정렬하는 방법</p>
+            </Link>
           </section>
         </div>
       </article>
