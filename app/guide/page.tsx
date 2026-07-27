@@ -111,6 +111,10 @@ export default function GuidePage() {
                 <p className="font-bold text-gray-900 mb-1">사진을 PDF로 만드는 법 (스캐너 없이) →</p>
                 <p className="text-sm text-gray-500">스마트폰 사진을 무료로 PDF로 변환하는 방법</p>
               </Link>
+              <Link href="/guide/jpg-to-pdf" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">JPG를 PDF로 변환하는 법 (여러 장 한번에) →</p>
+                <p className="text-sm text-gray-500">JPG·PNG를 무료로 PDF로 변환하고 합치는 방법</p>
+              </Link>
             </div>
           </section>
         </div>
