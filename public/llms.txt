@@ -22,13 +22,21 @@
 - 주소: https://zipperdoc.com/merge
 - 여러 PDF와 사진(통장사본, 사업자등록증 등)을 원하는 순서대로 하나의 PDF로 합칩니다.
 - 사진은 자동으로 A4 크기에 맞춰 정렬됩니다.
+- 사진 한 장을 PDF로 변환하는 용도로도 사용할 수 있습니다.
 
 ## 가이드 및 콘텐츠
 
 ### 정부지원사업 서류 제출 가이드
 - 주소: https://zipperdoc.com/guide
 - 정부지원사업·창업지원 서류 제출 시 자주 겪는 용량 제한(5MB)과 PDF 합치기 문제 해결법을 정리한 글입니다.
-- 통장사본·사업자등록증 같은 사진을 하나의 PDF로 합치는 방법, 용량 줄이는 방법, 자주 묻는 질문을 다룹니다.
+
+### 통장사본·사업자등록증을 하나의 PDF로 합치는 법
+- 주소: https://zipperdoc.com/guide/bankbook-pdf
+- 통장사본·사업자등록증 같은 사진과 PDF를 하나의 PDF로 합치는 방법을 단계별로 설명합니다.
+
+### 사진을 PDF로 만드는 법 (스캐너 없이)
+- 주소: https://zipperdoc.com/guide/photo-to-pdf
+- 스캐너 없이 스마트폰 사진을 PDF로 변환하고 여러 장을 하나의 PDF로 합치는 방법을 설명합니다.
 
 ## 자주 묻는 질문
 
@@ -38,6 +46,7 @@
 - 어떤 파일을 지원하나요? 압축은 JPG·PNG, 합치기는 PDF와 JPG·PNG입니다.
 - 지원사업 서류 용량 제한은 얼마인가요? 보통 파일당 5MB 또는 10MB 이하입니다.
 - 통장사본이 사진인데 PDF로 합칠 수 있나요? 네, ZipperDoc은 사진과 PDF를 함께 하나의 PDF로 합칠 수 있습니다.
+- 스캐너 없이 사진을 PDF로 만들 수 있나요? 네, 스마트폰 사진을 그대로 PDF로 변환할 수 있습니다.
 
 ## 예정 기능
 
@@ -50,4 +59,6 @@
 - 서류 용량 줄이기: https://zipperdoc.com/compress
 - 제출 서류 합치기: https://zipperdoc.com/merge
 - 서류 제출 가이드: https://zipperdoc.com/guide
+- 통장사본 PDF 합치기: https://zipperdoc.com/guide/bankbook-pdf
+- 사진을 PDF로 만드는 법: https://zipperdoc.com/guide/photo-to-pdf
 - 개인정보처리방침: https://zipperdoc.com/privacy
