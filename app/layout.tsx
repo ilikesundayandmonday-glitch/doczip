@@ -8,6 +8,9 @@ import ScrollTop from "./components/ScrollTop";
 export const metadata: Metadata = {
   title: "ZipperDoc - 정부지원사업 서류 준비 도우미",
   description: "지원사업 서류, 용량 줄이기부터 합치기까지. 설치 없이 무료로.",
+  other: {
+    "google-adsense-account": "ca-pub-9595724629001821",
+  },
 };
 
 export default function RootLayout({
