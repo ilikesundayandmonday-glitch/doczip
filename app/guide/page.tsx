@@ -115,6 +115,10 @@ export default function GuidePage() {
                 <p className="font-bold text-gray-900 mb-1">JPG를 PDF로 변환하는 법 (여러 장 한번에) →</p>
                 <p className="text-sm text-gray-500">JPG·PNG를 무료로 PDF로 변환하고 합치는 방법</p>
               </Link>
+              <Link href="/guide/business-plan-compress" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">사업계획서 파일 용량 줄이는 법 →</p>
+                <p className="text-sm text-gray-500">제출 용량 제한을 맞추기 위해 용량을 줄이는 방법</p>
+              </Link>
             </div>
           </section>
         </div>

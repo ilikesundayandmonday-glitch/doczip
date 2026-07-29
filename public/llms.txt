@@ -42,6 +42,10 @@
 - 주소: https://zipperdoc.com/guide/jpg-to-pdf
 - JPG·PNG 이미지를 PDF로 변환하고, 여러 장을 하나의 PDF로 합치는 방법을 설명합니다.
 
+### 사업계획서 파일 용량 줄이는 법
+- 주소: https://zipperdoc.com/guide/business-plan-compress
+- 지원사업 사업계획서의 파일 용량이 제출 제한(5MB·10MB)을 초과했을 때, 이미지를 압축해 용량을 줄이는 방법을 설명합니다.
+
 ## 자주 묻는 질문
 
 - 무료인가요? 네, 모든 기능이 무료입니다.
@@ -52,6 +56,7 @@
 - 통장사본이 사진인데 PDF로 합칠 수 있나요? 네, ZipperDoc은 사진과 PDF를 함께 하나의 PDF로 합칠 수 있습니다.
 - 스캐너 없이 사진을 PDF로 만들 수 있나요? 네, 스마트폰 사진을 그대로 PDF로 변환할 수 있습니다.
 - JPG를 PDF로 변환할 수 있나요? 네, JPG·PNG 이미지를 PDF로 변환하고 여러 장을 하나로 합칠 수 있습니다.
+- 사업계획서 용량을 줄일 수 있나요? 네, 사업계획서에 들어가는 이미지를 압축해 전체 파일 용량을 줄일 수 있습니다.
 
 ## 예정 기능
 
@@ -67,4 +72,5 @@
 - 통장사본 PDF 합치기: https://zipperdoc.com/guide/bankbook-pdf
 - 사진을 PDF로 만드는 법: https://zipperdoc.com/guide/photo-to-pdf
 - JPG를 PDF로 변환하는 법: https://zipperdoc.com/guide/jpg-to-pdf
+- 사업계획서 용량 줄이기: https://zipperdoc.com/guide/business-plan-compress
 - 개인정보처리방침: https://zipperdoc.com/privacy
