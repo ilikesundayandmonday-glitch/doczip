@@ -15,36 +15,40 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-6">
 
               <div className="flex-1 text-center md:text-left">
-                <h1 className="text-5xl sm:text-6xl font-bold text-[#FAFBFA] mb-8 leading-tight tracking-tight">
-                  지원사업 서류 준비를<br />
-                  위한 <span className="text-[#4ADE80]">무료 도구</span>
+                <h1 className="text-4xl sm:text-5xl font-bold text-[#FAFBFA] mb-6 leading-tight tracking-tight">
+                  정부지원사업 서류 준비,<br />
+                  <span className="text-[#4ADE80]">무료로 한 번에</span>
                 </h1>
 
-                <div className="flex items-center justify-center md:justify-start gap-4 text-sm font-bold text-[#DDE3DF] mb-6 flex-wrap">
-                  <span>용량 줄이기</span>
-                  <span className="text-[#4ADE80]/40">|</span>
-                  <span>서류 합치기</span>
-                  <span className="text-[#4ADE80]/40">|</span>
-                  <span>설치 없이 바로</span>
-                </div>
-
-                <p className="text-base sm:text-lg text-[#A8B2AC] max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed">
-                  통장사본·사업자등록증 같은 사진도 PDF로. 브라우저에서 바로 처리하고, 파일은 서버에 저장되지 않아요.
+                <p className="text-base sm:text-lg text-[#DDE3DF] max-w-lg mx-auto md:mx-0 mb-6 leading-relaxed">
+                  사업자등록증·통장사본·PDF의 용량을 줄이고, 제출 순서대로 하나의 PDF로 합치세요. 설치 없이 브라우저에서 처리되며 파일은 서버에 저장되지 않아요.
                 </p>
-                <div className="flex justify-center md:justify-start mb-8">
-                  <a href="#tools" onClick={() => track("무료로_시작하기_클릭")} className="bg-[#4ADE80] text-[#0C1610] text-lg font-bold px-10 py-5 rounded-2xl hover:bg-[#3bc46d] transition shadow-lg shadow-[#4ADE80]/20">
-                    무료로 시작하기 →
-                  </a>
+
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
+                  <Link
+                    href="/compress"
+                    onClick={() => track("히어로_압축_클릭")}
+                    className="bg-[#4ADE80] text-[#0C1610] text-base font-bold px-7 py-4 rounded-2xl hover:bg-[#3bc46d] transition shadow-lg shadow-[#4ADE80]/20"
+                  >
+                    서류 용량 줄이기
+                  </Link>
+                  <Link
+                    href="/merge"
+                    onClick={() => track("히어로_합치기_클릭")}
+                    className="bg-white/10 text-[#FAFBFA] text-base font-bold px-7 py-4 rounded-2xl hover:bg-white/20 transition border border-white/20"
+                  >
+                    PDF 합치기
+                  </Link>
                 </div>
 
-                <div className="text-xs tracking-[0.25em] text-[#8B968F] font-bold">
-                  ZIP + DOC. 서류를 하나로.
+                <div className="text-sm text-[#8B968F] font-medium">
+                  예비창업자 · 소상공인 · 중소기업을 위한 정부지원사업 서류 도구
                 </div>
               </div>
 
               <div className="flex flex-col items-center shrink-0">
-                <Image src="/DOCZIPlogo.png" alt="ZipperDoc 로고" width={320} height={320} className="drop-shadow-[0_0_50px_rgba(74,222,128,0.4)]" priority />
-                <span className="mt-4 text-3xl font-bold text-[#FAFBFA] tracking-tight">
+                <Image src="/DOCZIPlogo.png" alt="ZipperDoc 로고" width={240} height={240} className="drop-shadow-[0_0_50px_rgba(74,222,128,0.4)]" priority />
+                <span className="mt-3 text-2xl font-bold text-[#FAFBFA] tracking-tight">
                   Zipper<span className="text-[#4ADE80]">Doc</span>
                 </span>
               </div>

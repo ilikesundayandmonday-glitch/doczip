@@ -26,7 +26,7 @@ export default function Nav() {
               <path d="M3 10.5 L12 3 L21 10.5" />
               <path d="M5 9 V20 H19 V9" />
             </svg>
-            Home
+            홈
           </a>
           <Link href="/compress" className="text-sm font-semibold text-[#4ADE80] hover:text-[#63E88A] transition">이미지 압축</Link>
           <Link href="/merge" className="text-sm font-semibold text-[#4ADE80] hover:text-[#63E88A] transition">PDF 합치기</Link>
