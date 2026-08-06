@@ -1,9 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { openGraphBase } from "@/app/shared-metadata";
 
 export const metadata: Metadata = {
   title: "사업계획서 파일 용량 줄이는 법 - 제출 용량 제한 맞추기 (2026) | ZipperDoc",
   description: "지원사업 사업계획서 제출 시 파일 용량 제한(5MB·10MB)을 초과했을 때, 화질을 유지하며 용량을 줄이는 방법. 이미지가 많은 사업계획서의 용량을 무료로 줄이는 방법을 안내합니다.",
+  alternates: { canonical: "/guide/business-plan-compress" },
+  openGraph: {
+    ...openGraphBase,
+    title: "사업계획서 파일 용량 줄이는 법",
+    description: "제출 용량 제한을 맞추기 위해 화질을 유지하며 용량을 줄이는 방법을 안내합니다.",
+    url: "/guide/business-plan-compress",
+    type: "article",
+  },
 };
 
 export default function BusinessPlanCompressGuide() {

@@ -1,9 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { openGraphBase } from "@/app/shared-metadata";
 
 export const metadata: Metadata = {
   title: "사진을 PDF로 만드는 법 - 스캐너 없이 무료로 (2026) | ZipperDoc",
   description: "스캐너 없이 스마트폰 사진을 PDF로 만드는 방법. 여러 장의 사진을 한 번에 하나의 PDF로 합치고 A4 크기로 정렬하는 무료 방법을 안내합니다.",
+  alternates: { canonical: "/guide/photo-to-pdf" },
+  openGraph: {
+    ...openGraphBase,
+    title: "사진을 PDF로 만드는 법 (스캐너 없이)",
+    description: "스마트폰 사진을 PDF로 만들고 A4 크기로 정렬하는 방법을 안내합니다.",
+    url: "/guide/photo-to-pdf",
+    type: "article",
+  },
 };
 
 export default function PhotoToPdfGuide() {

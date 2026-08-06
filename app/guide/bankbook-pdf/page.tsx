@@ -1,9 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { openGraphBase } from "@/app/shared-metadata";
 
 export const metadata: Metadata = {
   title: "통장사본·사업자등록증을 하나의 PDF로 합치는 법 (2026) | ZipperDoc",
   description: "지원사업 제출용 통장사본, 사업자등록증 사진을 하나의 PDF로 합치는 방법. 사진과 PDF를 함께 합치고 A4로 정렬하는 무료 방법을 단계별로 안내합니다.",
+  alternates: { canonical: "/guide/bankbook-pdf" },
+  openGraph: {
+    ...openGraphBase,
+    title: "통장사본·사업자등록증을 하나의 PDF로 합치는 법",
+    description: "사진과 PDF를 함께 합치고 A4로 정렬하는 방법을 단계별로 안내합니다.",
+    url: "/guide/bankbook-pdf",
+    type: "article",
+  },
 };
 
 export default function BankbookPdfGuide() {

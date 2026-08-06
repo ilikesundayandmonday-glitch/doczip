@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "개인정보처리방침 | ZipperDoc",
+  description: "ZipperDoc의 개인정보처리방침입니다. 업로드한 파일이 서버로 전송되지 않는 이유와, 서비스가 수집하는 정보의 범위를 안내합니다.",
+  alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPage() {
   return (

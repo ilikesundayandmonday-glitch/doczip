@@ -1,9 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { openGraphBase } from "@/app/shared-metadata";
 
 export const metadata: Metadata = {
   title: "정부지원사업 서류 제출 가이드 - 용량 줄이기부터 PDF 합치기까지 | ZipperDoc",
   description: "정부지원사업·창업지원 서류 제출 시 자주 겪는 용량 제한(5MB)과 PDF 합치기 문제를 해결하는 방법. 통장사본·사업자등록증을 하나의 PDF로 합치는 법까지 정리했습니다.",
+  alternates: { canonical: "/guide" },
+  openGraph: {
+    ...openGraphBase,
+    title: "정부지원사업 서류 제출 가이드 | ZipperDoc",
+    description: "용량 제한(5MB)과 PDF 합치기 문제를 해결하는 방법을 정리했습니다.",
+    url: "/guide",
+    type: "article",
+  },
 };
 
 export default function GuidePage() {
@@ -118,6 +127,18 @@ export default function GuidePage() {
               <Link href="/guide/business-plan-compress" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
                 <p className="font-bold text-gray-900 mb-1">사업계획서 파일 용량 줄이는 법 →</p>
                 <p className="text-sm text-gray-500">제출 용량 제한을 맞추기 위해 용량을 줄이는 방법</p>
+              </Link>
+              <Link href="/guide/submission-checklist" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">정부지원사업 제출 서류 체크리스트 →</p>
+                <p className="text-sm text-gray-500">접수 전에 확인해야 할 항목을 순서대로 정리</p>
+              </Link>
+              <Link href="/guide/document-rejected" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">지원사업 서류 반려 사유 8가지와 해결법 →</p>
+                <p className="text-sm text-gray-500">실제로 자주 걸리는 반려 사유와 해결 방법</p>
+              </Link>
+              <Link href="/guide/file-safety" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">온라인 PDF 도구에 통장사본 올려도 될까? →</p>
+                <p className="text-sm text-gray-500">파일이 서버로 전송되는지 직접 확인하는 방법</p>
               </Link>
             </div>
           </section>

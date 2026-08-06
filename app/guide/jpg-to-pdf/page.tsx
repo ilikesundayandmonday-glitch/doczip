@@ -1,9 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { openGraphBase } from "@/app/shared-metadata";
 
 export const metadata: Metadata = {
   title: "JPG를 PDF로 변환하는 법 - 무료로 여러 장 한번에 (2026) | ZipperDoc",
   description: "JPG·PNG 이미지를 PDF로 변환하는 방법. 여러 장의 JPG를 한 번에 하나의 PDF로 합치고, 용량까지 줄이는 무료 방법을 안내합니다. 설치·회원가입 없이 브라우저에서 바로.",
+  alternates: { canonical: "/guide/jpg-to-pdf" },
+  openGraph: {
+    ...openGraphBase,
+    title: "JPG를 PDF로 변환하는 법 (여러 장 한번에)",
+    description: "여러 장의 JPG를 하나의 PDF로 합치고 용량까지 줄이는 방법을 안내합니다.",
+    url: "/guide/jpg-to-pdf",
+    type: "article",
+  },
 };
 
 export default function JpgToPdfGuide() {

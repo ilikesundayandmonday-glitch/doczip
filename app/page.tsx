@@ -76,12 +76,6 @@ export default function Home() {
           <Tool href="/merge" title="제출 서류 합치기" desc="PDF와 사진(통장사본·사업자등록증)을 원하는 순서대로 하나의 PDF로." event="도구클릭_합치기" />
         </div>
 
-        <div className="text-xs tracking-[0.2em] text-gray-400 font-medium mb-4 mt-16">곧 추가될 기능</div>
-        <div className="flex flex-col gap-2">
-          <SoonRow title="공고문 AI 요약" desc="공고문을 올리면 조건·제출 서류·마감일을 자동 정리" />
-          <SoonRow title="HWP 변환" desc="한글(HWP) 파일을 PDF로 변환" />
-        </div>
-
         <div className="mt-16">
           <Link href="/guide" className="block bg-[#1C1F1D] rounded-2xl p-7 hover:bg-[#252927] transition">
             <div className="text-xs tracking-[0.2em] text-[#4ADE80] font-medium mb-2">가이드</div>
@@ -130,18 +124,6 @@ function Tool({ href, title, desc, event }: { href: string; title: string; desc:
       </div>
       <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
     </Link>
-  );
-}
-
-function SoonRow({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-xl px-5 py-4">
-      <div className="flex-1">
-        <p className="text-base font-bold text-gray-700">{title}</p>
-        <p className="text-sm text-gray-400">{desc}</p>
-      </div>
-      <span className="text-xs text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full whitespace-nowrap">곧 출시</span>
-    </div>
   );
 }
 

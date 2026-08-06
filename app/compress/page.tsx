@@ -144,6 +144,80 @@ export default function CompressPage() {
         <p className="text-center text-xs text-gray-400 mt-6">
           압축은 브라우저에서 처리되며, 이미지는 어디에도 전송되지 않습니다.
         </p>
+
+        <div className="mt-16 bg-white border border-gray-200 rounded-2xl p-8 text-gray-700 leading-relaxed">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">서류 용량은 왜 줄여야 할까요?</h2>
+          <p className="mb-4">
+            정부지원사업, 예비창업패키지, 소상공인 지원사업의 제출 시스템은 대부분 파일당 5MB 또는 10MB의
+            용량 제한을 둡니다. 문제는 스마트폰으로 촬영한 서류 사진이 한 장에 5~10MB를 넘는 경우가 많다는
+            점입니다. 최신 스마트폰일수록 화소가 높아 파일이 커지기 때문에, 촬영한 그대로는 업로드 자체가
+            막히는 일이 흔합니다.
+          </p>
+          <p className="mb-8">
+            이때 필요한 것이 이미지 압축입니다. 사진의 실제 내용은 그대로 두고 데이터 크기만 줄이는
+            방식이라, 글자를 읽는 데 문제가 없는 선에서 용량을 크게 낮출 수 있습니다.
+          </p>
+
+          <h2 className="text-xl font-bold text-gray-900 mb-4">압축 강도는 어떻게 정하나요?</h2>
+          <p className="mb-4">
+            이 도구의 슬라이더는 화질을 기준으로 동작합니다. 값을 낮출수록 용량이 많이 줄지만 글자가
+            흐려질 수 있고, 높일수록 선명하지만 용량이 덜 줄어듭니다. 서류 종류에 따라 다음 기준을
+            참고하세요.
+          </p>
+          <ul className="list-disc pl-5 mb-4 flex flex-col gap-2">
+            <li>
+              <strong className="text-gray-900">통장사본·사업자등록증 (글자 위주):</strong> 화질 70~80%.
+              계좌번호나 사업자번호 같은 숫자가 뭉개지면 반려될 수 있으므로 너무 낮추지 마세요.
+            </li>
+            <li>
+              <strong className="text-gray-900">신분증 사본:</strong> 화질 80% 이상. 이름과 번호가 또렷해야
+              합니다.
+            </li>
+            <li>
+              <strong className="text-gray-900">현장 사진·제품 사진:</strong> 화질 50~70%. 글자가 없으므로
+              더 과감하게 줄여도 됩니다.
+            </li>
+          </ul>
+          <p className="mb-8">
+            압축 후에는 결과 파일을 반드시 열어서 확인하세요. 특히 숫자와 도장 부분이 알아볼 수 있는지
+            보시면 됩니다. 만족스럽지 않다면 화질을 10%씩 올려가며 다시 압축하면 됩니다.
+          </p>
+
+          <h2 className="text-xl font-bold text-gray-900 mb-4">압축해도 용량이 안 줄어든다면</h2>
+          <p className="mb-4">
+            이미 한 번 압축된 이미지는 더 줄어들지 않을 수 있습니다. 또한 PNG 형식의 스크린샷은 JPG보다
+            압축 효율이 낮습니다. 이런 경우에는 화질을 더 낮추기보다, 서류를 다시 촬영할 때 카메라 해상도를
+            낮춰서 찍는 편이 결과가 더 낫습니다.
+          </p>
+          <p className="mb-8">
+            여러 장을 합친 PDF의 용량이 문제라면, 합치기 전에 각 사진을 먼저 압축한 뒤{" "}
+            <Link href="/merge" className="text-[#1D9E75] underline">
+              서류 합치기
+            </Link>
+            를 사용하는 순서가 효율적입니다.
+          </p>
+
+          <h2 className="text-xl font-bold text-gray-900 mb-4">파일은 어디로도 전송되지 않습니다</h2>
+          <p className="mb-4">
+            통장사본이나 신분증처럼 민감한 서류를 온라인 도구에 올리는 것이 불안하실 수 있습니다.
+            ZipperDoc의 압축은 서버가 아니라 이용자의 브라우저 안에서 실행됩니다. 파일이 인터넷을 통해
+            어디론가 업로드되는 과정 자체가 없기 때문에, 서버에 저장되거나 남을 파일이 존재하지 않습니다.
+          </p>
+          <p>
+            직접 확인하고 싶으시다면, 파일을 올린 뒤 인터넷 연결을 끊고 압축 버튼을 눌러보세요. 그대로
+            동작합니다. 자세한 내용은{" "}
+            <Link href="/privacy" className="text-[#1D9E75] underline">
+              개인정보처리방침
+            </Link>
+            에서 확인하실 수 있습니다.
+          </p>
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link href="/guide" className="text-sm text-gray-500 hover:text-gray-800 underline">
+            정부지원사업 서류 제출 가이드 전체 보기 →
+          </Link>
+        </div>
       </div>
     </main>
   );
