@@ -60,10 +60,14 @@ export default function Home() {
           <div className="inline-block animate-[scroll_20s_linear_infinite] text-sm text-[#8B968F]">
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 합치기</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 용량 줄이기</span>
+            <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 나누기</span>
+            <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 페이지 삭제</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> 사진 PDF 변환</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> 통장사본·사업자등록증 정리</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 합치기</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 용량 줄이기</span>
+            <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 나누기</span>
+            <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 페이지 삭제</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> 사진 PDF 변환</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> 통장사본·사업자등록증 정리</span>
           </div>
@@ -76,6 +80,8 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Tool href="/compress" title="PDF·사진 용량 줄이기" desc="5MB 업로드 제한에 걸릴 때. 화질을 조절해가며 규격에 맞춰요." event="도구클릭_압축" />
           <Tool href="/merge" title="PDF 합치기" desc="PDF와 사진(통장사본·사업자등록증)을 원하는 순서대로 하나의 PDF로." event="도구클릭_합치기" />
+          <Tool href="/split" title="PDF 나누기" desc="필요한 페이지 범위만 뽑아내거나, 한 장씩 낱개 파일로 나눠요." event="도구클릭_나누기" />
+          <Tool href="/delete-pages" title="PDF 페이지 삭제" desc="스캔하다 생긴 빈 페이지나 필요 없는 장만 골라서 빼요." event="도구클릭_페이지삭제" />
         </div>
 
         <div className="mt-16">
