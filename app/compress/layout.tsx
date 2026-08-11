@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
 
 export const metadata: Metadata = {
-  title: "서류 용량 줄이기 - 5MB 제한 맞추는 무료 이미지 압축 | ZipperDoc",
-  description: "정부지원사업 제출 서류의 이미지 용량을 줄여 5MB·10MB 제한에 맞추세요. 압축 강도를 직접 조절할 수 있고, 파일은 브라우저에서만 처리되어 서버에 저장되지 않습니다.",
+  title: "사진·이미지 용량 줄이기 무료 | 업로드 없이 - ZipperDoc",
+  description: "사진 용량 줄이기, 이미지 용량 줄이기를 무료로. 화질을 조절해가며 5MB·10MB 제출 기준에 맞출 수 있습니다. 파일이 서버로 전송되지 않고 브라우저에서만 처리됩니다.",
+  keywords: ["사진 용량 줄이기", "이미지 용량 줄이기", "PDF 용량 줄이기", "사진 압축", "파일 용량 줄이기"],
   alternates: { canonical: "/compress" },
   openGraph: {
     ...openGraphBase,
-    title: "서류 용량 줄이기 | ZipperDoc",
-    description: "제출 용량 제한에 맞춰 이미지 용량을 줄이세요. 설치 없이 무료로.",
+    title: "사진·이미지 용량 줄이기 무료 | ZipperDoc",
+    description: "제출 용량 제한에 맞춰 용량을 줄이세요. 파일 업로드 없이, 설치 없이.",
     url: "/compress",
     type: "website",
   },
