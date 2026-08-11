@@ -115,10 +115,10 @@ export default function MergePage() {
         </Link>
 
         <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">
-          제출 서류 합치기
+          PDF 합치기
         </h1>
         <p className="text-gray-500 text-center mb-8">
-          PDF·사진을 하나로 · 파일은 서버에 저장되지 않습니다
+          사진을 PDF로 변환해 함께 합칩니다 · 파일은 서버에 저장되지 않습니다
         </p>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-8">

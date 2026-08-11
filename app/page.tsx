@@ -39,6 +39,20 @@ export default function Home() {
                   >
                     PDF 합치기
                   </Link>
+                  <Link
+                    href="/split"
+                    onClick={() => track("히어로_나누기_클릭")}
+                    className="bg-white/10 text-[#FAFBFA] text-base font-bold px-7 py-4 rounded-2xl hover:bg-white/20 transition border border-white/20"
+                  >
+                    PDF 나누기
+                  </Link>
+                  <Link
+                    href="/delete-pages"
+                    onClick={() => track("히어로_페이지삭제_클릭")}
+                    className="bg-white/10 text-[#FAFBFA] text-base font-bold px-7 py-4 rounded-2xl hover:bg-white/20 transition border border-white/20"
+                  >
+                    PDF 페이지 삭제
+                  </Link>
                 </div>
 
                 <div className="text-sm text-[#8B968F] font-medium">

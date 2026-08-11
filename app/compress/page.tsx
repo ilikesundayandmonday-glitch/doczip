@@ -77,7 +77,7 @@ export default function CompressPage() {
         </Link>
 
         <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">
-          서류 용량 줄이기
+          사진·이미지 용량 줄이기
         </h1>
         <p className="text-gray-500 text-center mb-8">
           5MB 제한 맞추기 · 파일은 서버에 저장되지 않습니다
