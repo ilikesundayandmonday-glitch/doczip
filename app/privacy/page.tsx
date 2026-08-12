@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         </Link>
 
         <h1 className="text-3xl font-bold text-gray-900 mb-2">개인정보처리방침</h1>
-        <p className="text-sm text-gray-400 mb-10">최종 수정일: 2026년 7월 25일</p>
+        <p className="text-sm text-gray-400 mb-10">최종 수정일: 2026년 8월 12일</p>
 
         <div className="flex flex-col gap-8 text-gray-700 leading-relaxed">
           <section>
@@ -37,23 +37,43 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">2. 수집하는 정보</h2>
-            <p className="mb-3">서비스는 개인을 식별할 수 있는 정보를 수집하지 않습니다. 다만 서비스 개선을 위해 다음의 익명 정보를 수집할 수 있습니다.</p>
+            <p className="mb-3">서비스는 회원가입을 받지 않으며, 개인을 식별할 수 있는 정보를 수집하지 않습니다. 다만 서비스 개선을 위해 다음의 익명 정보를 수집합니다.</p>
             <ul className="list-disc pl-6 flex flex-col gap-1">
               <li>방문자 수, 페이지 조회수 등 익명 통계</li>
-              <li>접속 기기·브라우저 종류, 유입 경로</li>
-              <li>어떤 기능이 얼마나 사용되었는지에 대한 익명 집계</li>
+              <li>접속 기기·브라우저 종류, 대략적인 접속 국가, 유입 경로</li>
+              <li>버튼 클릭 등 기능 이용 여부에 대한 익명 집계</li>
             </ul>
             <p className="mt-3">
-              위 정보는 개인을 특정할 수 없는 형태로 수집되며, 이름·연락처·파일 내용 등은 포함되지 않습니다.
+              기능 이용 집계에는 &lsquo;파일을 선택했다&rsquo;, &lsquo;다운로드 버튼을 눌렀다&rsquo;와 같은
+              행위 발생 여부만 포함됩니다. 파일의 내용은 물론 파일명·용량·페이지 수도 포함되지 않으며,
+              해당 정보는 서버로 전송되지 않으므로 수집할 수 있는 방법 자체가 없습니다. 이름·연락처 등
+              개인정보도 수집하지 않습니다.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">3. 쿠키 및 광고</h2>
+            <p className="mb-3">
+              서비스는 운영 비용을 충당하기 위해 <strong className="text-gray-900">Google AdSense
+              광고를 사용하고 있습니다.</strong> Google을 포함한 제3자 광고 사업자는 이용자의 이전 방문
+              기록을 바탕으로 광고를 게재하기 위해 쿠키를 사용합니다. 이 영역은 Google이 직접 수집·처리하며,
+              서비스는 해당 데이터에 접근하지 않습니다.
+            </p>
+            <p className="mb-3">
+              이용자는{" "}
+              <a href="https://myadcenter.google.com" target="_blank" rel="noopener noreferrer" className="text-[#1D9E75] underline">
+                Google 광고 설정
+              </a>
+              에서 맞춤 광고를 해제하거나, 브라우저 설정에서 쿠키를 거부할 수 있습니다. Google의 데이터
+              처리 방식은{" "}
+              <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-[#1D9E75] underline">
+                Google 파트너 사이트 정책
+              </a>
+              에서 확인하실 수 있습니다.
+            </p>
             <p>
-              서비스는 이용 통계 분석을 위해 쿠키를 사용할 수 있습니다. 또한 향후 Google AdSense 등
-              제3자 광고 서비스를 도입할 경우, 해당 서비스가 광고 제공을 위해 쿠키를 사용할 수 있습니다.
-              이용자는 브라우저 설정에서 쿠키를 거부할 수 있으며, 이 경우 일부 기능이 제한될 수 있습니다.
+              방문 통계 분석에 사용하는 Vercel Analytics는 쿠키를 사용하지 않습니다. 광고 쿠키를 거부하시더라도
+              용량 줄이기·PDF 합치기 등 서비스의 모든 기능은 그대로 이용하실 수 있습니다.
             </p>
           </section>
 
@@ -64,9 +84,13 @@ export default function PrivacyPage() {
               이들은 각자의 개인정보처리방침에 따라 익명 데이터를 처리할 수 있습니다.
             </p>
             <ul className="list-disc pl-6 flex flex-col gap-1 mt-3">
-              <li>Vercel (호스팅 및 방문 통계)</li>
-              <li>Google AdSense (광고, 도입 시)</li>
+              <li>Vercel — 웹사이트 호스팅 및 방문 통계 (쿠키 미사용)</li>
+              <li>Google AdSense — 광고 게재 (쿠키 사용, 현재 적용 중)</li>
             </ul>
+            <p className="mt-3">
+              두 서비스 모두 이용자가 업로드한 파일에는 접근하지 않습니다. 파일은 브라우저 밖으로
+              전송되지 않으므로 외부 서비스에 전달될 경로 자체가 존재하지 않습니다.
+            </p>
           </section>
 
           <section>

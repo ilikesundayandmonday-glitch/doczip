@@ -137,10 +137,13 @@ export default function Home() {
 
           <div className="border-t border-white/10 pt-8">
             <p className="text-[#FAFBFA] font-bold mb-2">직접 확인해보세요</p>
-            <p className="text-[#A8B2AC] text-sm leading-relaxed">
+            <p className="text-[#A8B2AC] text-sm leading-relaxed mb-5">
               이 페이지를 연 뒤 와이파이를 끄고 파일을 올려 변환해보세요. 그대로 동작합니다. 서버로 보내는
               구조였다면 오류가 나거나 멈춥니다.
             </p>
+            <Link href="/safety" className="inline-block text-sm font-bold text-[#4ADE80] hover:text-[#63E88A] transition">
+              왜 안전한지 원리부터 설명합니다 →
+            </Link>
           </div>
         </div>
       </section>

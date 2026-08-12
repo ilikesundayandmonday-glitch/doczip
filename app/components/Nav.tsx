@@ -126,6 +126,7 @@ export default function Nav() {
           </div>
 
           <Link href="/guide" className={linkClass}>가이드</Link>
+          <Link href="/safety" className={linkClass}>안전한 이유</Link>
         </div>
 
         <a href="/" onClick={goHome} className="flex items-center gap-2 cursor-pointer shrink-0">
