@@ -172,12 +172,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="px-6 py-10 border-t border-gray-200">
-        <div className="flex flex-col items-center gap-3">
-          <Link href="/privacy" className="text-sm text-gray-500 hover:text-gray-800 transition">개인정보처리방침</Link>
-          <p className="text-center text-sm text-gray-400">© 2026 ZipperDoc. 한국 문서 행정을 더 쉽게.</p>
-        </div>
-      </footer>
     </main>
   );
 }

@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
 
 export const metadata: Metadata = {
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Nav />
         {children}
+        <Footer />
         <ScrollTop />
         <Analytics />
       </body>

@@ -104,25 +104,27 @@ export default function Nav() {
               </svg>
             </button>
 
-            {open && (
-              <div className="absolute left-0 top-full pt-3">
-                <div className="w-52 rounded-xl border border-[#4ADE80]/25 bg-[#0F1310] p-1.5 shadow-xl shadow-black/50">
-                  {PDF_TOOLS.map((tool) => {
-                    const isCurrent = pathname === tool.href.split("?")[0];
-                    return (
-                      <Link
-                        key={tool.label}
-                        href={tool.href}
-                        onClick={() => setOpen(false)}
-                        className={`block rounded-lg px-3 py-2.5 text-sm transition ${isCurrent ? "bg-[#4ADE80]/12 text-[#FAFBFA]" : "text-[#A8B2AC] hover:bg-white/5 hover:text-[#FAFBFA]"}`}
-                      >
-                        {tool.label}
-                      </Link>
-                    );
-                  })}
-                </div>
+            <div
+              className={`absolute left-0 top-full pt-3 transition-opacity duration-150 ${open ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+              aria-hidden={!open}
+            >
+              <div className="w-52 rounded-xl border border-[#4ADE80]/25 bg-[#0F1310] p-1.5 shadow-xl shadow-black/50">
+                {PDF_TOOLS.map((tool) => {
+                  const isCurrent = pathname === tool.href.split("?")[0];
+                  return (
+                    <Link
+                      key={tool.label}
+                      href={tool.href}
+                      onClick={() => setOpen(false)}
+                      tabIndex={open ? 0 : -1}
+                      className={`block rounded-lg px-3 py-2.5 text-sm transition ${isCurrent ? "bg-[#4ADE80]/12 text-[#FAFBFA]" : "text-[#A8B2AC] hover:bg-white/5 hover:text-[#FAFBFA]"}`}
+                    >
+                      {tool.label}
+                    </Link>
+                  );
+                })}
               </div>
-            )}
+            </div>
           </div>
 
           <Link href="/guide" className={linkClass}>가이드</Link>
