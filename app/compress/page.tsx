@@ -197,6 +197,29 @@ export default function CompressPage() {
             를 사용하는 순서가 효율적입니다.
           </p>
 
+          <h2 className="text-xl font-bold text-gray-900 mb-4">PDF 용량이 큰 경우에는</h2>
+          <p className="mb-4">
+            PDF 자체가 제출 기준을 넘는다면 압축만으로는 한계가 있습니다. 이럴 때는 먼저 파일 안을
+            열어보세요. 스캔하다 생긴 빈 페이지나 안내문 페이지가 섞여 있는 경우가 많습니다. 그런 장을{" "}
+            <Link href="/delete-pages" className="text-[#1D9E75] underline">PDF 페이지 삭제</Link>로
+            빼는 것만으로 용량이 눈에 띄게 줄어듭니다.
+          </p>
+          <p className="mb-8">
+            그래도 넘는다면 파일을 둘로 나눠 두 번에 걸쳐 제출하는 방법이 있습니다.{" "}
+            <Link href="/split" className="text-[#1D9E75] underline">PDF 나누기</Link>에서 앞부분과
+            뒷부분의 페이지 범위를 각각 지정해 뽑아내면 됩니다. 다만 공고문에서 하나의 파일로 제출하도록
+            요구하는 경우에는 쓸 수 없으니, 업로드 칸이 몇 개인지 먼저 확인하세요.
+          </p>
+
+          <h2 className="text-xl font-bold text-gray-900 mb-4">촬영할 때 미리 줄이는 방법</h2>
+          <p className="mb-8">
+            압축은 이미 찍은 사진을 손보는 일이라 한계가 있습니다. 애초에 작게 찍으면 화질 손실 없이
+            용량만 줄일 수 있어요. 스마트폰 카메라 설정에서 해상도를 한 단계 낮추고, 서류가 화면을 꽉
+            채우도록 가까이서 찍으면 됩니다. 서류 주변의 책상이나 바닥이 넓게 들어갈수록 쓸데없는
+            용량만 늘어납니다. 밝은 곳에서 그림자 없이 찍는 것도 중요한데, 어두우면 노이즈가 생겨
+            압축 효율까지 떨어집니다.
+          </p>
+
           <h2 className="text-xl font-bold text-gray-900 mb-4">파일은 어디로도 전송되지 않습니다</h2>
           <p className="mb-4">
             통장사본이나 신분증처럼 민감한 서류를 온라인 도구에 올리는 것이 불안하실 수 있습니다.

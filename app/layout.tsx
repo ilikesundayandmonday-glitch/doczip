@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
 import { JsonLd, siteGraph } from "./structured-data";
+import { openGraphBase, ogImage } from "./shared-metadata";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zipperdoc.com"),
@@ -16,12 +17,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
+    ...openGraphBase,
     title: "PDF 합치기·용량 줄이기 무료 | ZipperDoc",
     description: "파일이 서버로 전송되지 않습니다. 브라우저에서만 처리되어 민감한 서류도 안전하게.",
     url: "https://zipperdoc.com",
-    siteName: "ZipperDoc",
-    locale: "ko_KR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PDF 합치기·용량 줄이기 무료 | ZipperDoc",
+    description: "파일이 서버로 전송되지 않습니다. 브라우저에서만 처리되어 민감한 서류도 안전하게.",
+    images: [ogImage.url],
   },
   other: {
     "google-adsense-account": "ca-pub-9595724629001821",

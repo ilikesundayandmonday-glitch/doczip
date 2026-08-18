@@ -72,6 +72,30 @@ export function toolApp({ name, path, description, featureList }: ToolInput) {
   };
 }
 
+export function guideArticle({
+  headline,
+  description,
+  path,
+}: {
+  headline: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}${path}` },
+    url: `${SITE}${path}`,
+    image: `${SITE}/og-cover.png`,
+    inLanguage: "ko",
+    author: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    isAccessibleForFree: true,
+  };
+}
+
 export function faqPage(items: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",

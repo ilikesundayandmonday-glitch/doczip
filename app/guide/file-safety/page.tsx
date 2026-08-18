@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, guideArticle } from "@/app/structured-data";
 
 export const metadata: Metadata = {
   title: "온라인 PDF 도구에 통장사본 올려도 될까? 안전하게 쓰는 법 (2026) | ZipperDoc",
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
 export default function FileSafetyGuide() {
   return (
     <main className="min-h-screen bg-white py-16 px-6">
+      <JsonLd
+        data={guideArticle({
+          headline: "온라인 PDF 도구에 통장사본 올려도 될까? 안전하게 쓰는 법 (2026)",
+          description: "무료 PDF 변환 사이트에 통장사본·신분증을 올려도 되는지, 서버 업로드형과 브라우저 처리형의 차이는 무엇인지 정리했습니다. 파일이 전송되는지 직접 확인하는 방법도 안내합니다.",
+          path: "/guide/file-safety",
+        })}
+      />
       <article className="max-w-3xl mx-auto">
         <Link href="/guide" className="inline-flex items-center text-gray-500 hover:text-gray-800 mb-8 transition">
           ← 가이드 목록
@@ -122,19 +130,20 @@ export default function FileSafetyGuide() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">ZipperDoc은 어떻게 동작하나요</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">ZipperDoc은 어느 쪽인가요</h2>
             <p className="mb-3">
-              ZipperDoc의 용량 줄이기와 서류 합치기는 모두 브라우저 처리형입니다. 파일을 올려도 서버로
-              전송되지 않고, 이용자의 브라우저 안에서 압축과 병합이 실행됩니다. 저장할 파일이 서버에
-              도착하지 않으므로 보관 기간이나 삭제 주기라는 개념 자체가 없습니다.
+              브라우저 처리형입니다. 위에 적은 두 가지 방법으로 직접 확인해보셔도 됩니다.
             </p>
             <p>
-              위에 적은 방법 그대로 확인해보셔도 됩니다. 페이지를 연 뒤 인터넷을 끊고 파일을 합치거나
-              압축해보세요. 정상적으로 동작합니다. 수집하는 정보의 범위는{" "}
+              어떤 구조라서 그렇게 되는지, 서버는 무슨 일을 하는지는{" "}
+              <Link href="/safety" className="text-[#1D9E75] font-medium underline">
+                ZipperDoc이 안전한 이유
+              </Link>
+              에 원리부터 정리해두었습니다. 수집하는 정보의 범위는{" "}
               <Link href="/privacy" className="text-[#1D9E75] font-medium underline">
                 개인정보처리방침
               </Link>
-              에 정리해두었습니다.
+              에 있습니다.
             </p>
           </section>
 

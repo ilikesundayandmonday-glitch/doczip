@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, guideArticle } from "@/app/structured-data";
 
 export const metadata: Metadata = {
   title: "지원사업 서류 반려 사유 8가지와 해결법 (2026) | ZipperDoc",
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
 export default function DocumentRejectedGuide() {
   return (
     <main className="min-h-screen bg-white py-16 px-6">
+      <JsonLd
+        data={guideArticle({
+          headline: "지원사업 서류 반려 사유 8가지와 해결법 (2026)",
+          description: "정부지원사업 접수에서 서류가 반려되는 대표적인 이유와 각각의 해결 방법. 발급일자 초과, 파일 형식 오류, 용량 초과, 순서 오류 등 실제로 자주 걸리는 항목을 정리했습니다.",
+          path: "/guide/document-rejected",
+        })}
+      />
       <article className="max-w-3xl mx-auto">
         <Link href="/guide" className="inline-flex items-center text-gray-500 hover:text-gray-800 mb-8 transition">
           ← 가이드 목록

@@ -71,13 +71,13 @@ export default function Nav() {
     <nav className="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#4ADE80]/40">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-5 sm:gap-7">
-          <a href="/" onClick={goHome} className={`${linkClass} flex items-center gap-1.5 cursor-pointer`}>
+          <Link href="/" onClick={goHome} className={`${linkClass} flex items-center gap-1.5 cursor-pointer`}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 10.5 L12 3 L21 10.5" />
               <path d="M5 9 V20 H19 V9" />
             </svg>
             홈
-          </a>
+          </Link>
 
           <Link href="/compress" className={linkClass}>용량 줄이기</Link>
 
@@ -131,12 +131,12 @@ export default function Nav() {
           <Link href="/safety" className={linkClass}>안전한 이유</Link>
         </div>
 
-        <a href="/" onClick={goHome} className="flex items-center gap-2 cursor-pointer shrink-0">
+        <Link href="/" onClick={goHome} className="flex items-center gap-2 cursor-pointer shrink-0">
           <Image src="/DOCZIPlogo.png" alt="ZipperDoc" width={38} height={38} className="rounded-lg" />
           <span className="text-lg font-bold text-[#FAFBFA]">
             Zipper<span className="text-[#4ADE80]">Doc</span>
           </span>
-        </a>
+        </Link>
       </div>
     </nav>
   );

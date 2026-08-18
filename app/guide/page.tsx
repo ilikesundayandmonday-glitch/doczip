@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, guideArticle } from "@/app/structured-data";
 
 export const metadata: Metadata = {
   title: "정부지원사업 서류 제출 가이드 - 용량 줄이기부터 PDF 합치기까지 | ZipperDoc",
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
 export default function GuidePage() {
   return (
     <main className="min-h-screen bg-white py-16 px-6">
+      <JsonLd
+        data={guideArticle({
+          headline: "정부지원사업 서류 제출 가이드 - 용량 줄이기부터 PDF 합치기까지",
+          description: "정부지원사업·창업지원 서류 제출 시 자주 겪는 용량 제한(5MB)과 PDF 합치기 문제를 해결하는 방법. 통장사본·사업자등록증을 하나의 PDF로 합치는 법까지 정리했습니다.",
+          path: "/guide",
+        })}
+      />
       <article className="max-w-3xl mx-auto">
         <Link href="/" className="inline-flex items-center text-gray-500 hover:text-gray-800 mb-8 transition">
           ← 홈으로

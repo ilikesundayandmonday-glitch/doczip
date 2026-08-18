@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, guideArticle } from "@/app/structured-data";
 
 export const metadata: Metadata = {
   title: "사진을 PDF로 만드는 법 - 스캐너 없이 무료로 (2026) | ZipperDoc",
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
 export default function PhotoToPdfGuide() {
   return (
     <main className="min-h-screen bg-white py-16 px-6">
+      <JsonLd
+        data={guideArticle({
+          headline: "사진을 PDF로 만드는 법 - 스캐너 없이 무료로 (2026)",
+          description: "스캐너 없이 스마트폰 사진을 PDF로 만드는 방법. 여러 장의 사진을 한 번에 하나의 PDF로 합치고 A4 크기로 정렬하는 무료 방법을 안내합니다.",
+          path: "/guide/photo-to-pdf",
+        })}
+      />
       <article className="max-w-3xl mx-auto">
         <Link href="/guide" className="inline-flex items-center text-gray-500 hover:text-gray-800 mb-8 transition">
           ← 가이드 목록

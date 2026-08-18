@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, guideArticle } from "@/app/structured-data";
 
 export const metadata: Metadata = {
   title: "정부지원사업 제출 서류 체크리스트 - 접수 전 확인할 12가지 (2026) | ZipperDoc",
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
 export default function SubmissionChecklistGuide() {
   return (
     <main className="min-h-screen bg-white py-16 px-6">
+      <JsonLd
+        data={guideArticle({
+          headline: "정부지원사업 제출 서류 체크리스트 - 접수 전 확인할 12가지 (2026)",
+          description: "정부지원사업·예비창업패키지 서류 접수 전에 확인해야 할 항목을 순서대로 정리했습니다. 서류 종류, 파일 형식, 용량, 발급일자, 마감 시각까지 놓치기 쉬운 부분을 짚었습니다.",
+          path: "/guide/submission-checklist",
+        })}
+      />
       <article className="max-w-3xl mx-auto">
         <Link href="/guide" className="inline-flex items-center text-gray-500 hover:text-gray-800 mb-8 transition">
           ← 가이드 목록

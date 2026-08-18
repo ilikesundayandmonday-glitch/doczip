@@ -220,6 +220,16 @@ export default function MergePage() {
             <li>최종 파일 용량이 제출 기준 이하인지 확인</li>
           </ul>
 
+          <h2 className="text-xl font-bold text-gray-900 mb-4">합친 뒤에 손볼 것이 있다면</h2>
+          <p className="mb-8">
+            합치고 나서 필요 없는 장이 섞여 있다면{" "}
+            <Link href="/delete-pages" className="text-[#1D9E75] underline">PDF 페이지 삭제</Link>로
+            그 장만 빼면 됩니다. 반대로 합친 파일에서 일부만 따로 제출해야 한다면{" "}
+            <Link href="/split" className="text-[#1D9E75] underline">PDF 나누기</Link>로 원하는 페이지
+            범위만 뽑아낼 수 있습니다. 두 작업 모두 파일을 다시 올릴 필요 없이 브라우저 안에서
+            처리됩니다.
+          </p>
+
           <h2 className="text-xl font-bold text-gray-900 mb-4">파일은 어디로도 전송되지 않습니다</h2>
           <p>
             통장사본처럼 민감한 서류를 온라인 도구에 올리는 것이 불안하실 수 있습니다. ZipperDoc의 합치기는
