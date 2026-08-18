@@ -4,10 +4,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { track } from "@vercel/analytics";
 import WaveBackground from "./components/WaveBackground";
+import { JsonLd, faqPage } from "./structured-data";
+
+const HOME_FAQ = [
+  { q: "무료로 쓸 수 있나요?", a: "네. 현재 제공되는 도구는 모두 무료이고, 회원가입도 필요 없습니다." },
+  { q: "통장사본이나 신분증을 올려도 안전한가요?", a: "파일이 서버로 전송되지 않습니다. 모든 처리가 브라우저 안에서 이루어지므로 저장될 파일 자체가 생기지 않습니다. 와이파이를 끄고 변환해보시면 확인하실 수 있습니다." },
+  { q: "PDF와 사진을 같이 합칠 수 있나요?", a: "네. JPG·PNG 사진과 PDF를 함께 올려 하나의 PDF로 합칠 수 있습니다. 사진은 A4 크기에 맞춰 자동 정렬됩니다." },
+  { q: "용량은 얼마나 줄어드나요?", a: "화질을 조절해가며 원하는 용량에 맞출 수 있습니다. 5MB·10MB 같은 제출 기준에 맞추는 용도로 쓰기 좋습니다." },
+  { q: "프로그램을 설치해야 하나요?", a: "아니요. 브라우저에서 바로 사용합니다. 설치·업데이트가 필요 없어요." },
+  { q: "수집하는 정보가 전혀 없나요?", a: "파일 내용은 수집하지 않습니다. 다만 방문자 수와 버튼 클릭 같은 이용 통계는 수집합니다. 어떤 기능이 실제로 쓰이는지 확인하기 위한 것이며 파일이나 파일명과는 무관합니다." },
+];
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd data={faqPage(HOME_FAQ)} />
       <section className="relative overflow-hidden bg-[#1C1F1D]">
         <WaveBackground />
         <div className="relative z-10 px-8 sm:px-16 py-20 sm:py-28">

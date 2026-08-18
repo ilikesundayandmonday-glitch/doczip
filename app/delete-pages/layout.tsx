@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, toolApp } from "@/app/structured-data";
 
 export const metadata: Metadata = {
   title: "PDF 페이지 삭제 무료 | 필요 없는 장만 빼기 - ZipperDoc",
@@ -20,5 +21,24 @@ export default function DeletePagesLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <>
+      <JsonLd
+        data={toolApp({
+          name: "PDF 페이지 삭제 - ZipperDoc",
+          path: "/delete-pages",
+          description:
+            "PDF에서 빈 페이지나 필요 없는 장만 골라 지우고 나머지를 하나의 PDF로 저장하는 무료 도구. 파일이 서버로 전송되지 않고 이용자의 브라우저 안에서 처리됩니다.",
+          featureList: [
+            "페이지 번호를 눌러 삭제할 장 선택",
+            "스캔 시 생긴 빈 페이지 제거",
+            "원본 파일은 수정하지 않고 새 파일로 저장",
+            "파일 업로드 없이 브라우저에서 처리",
+            "무료, 설치 불필요, 회원가입 불필요",
+          ],
+        })}
+      />
+      {children}
+    </>
+  );
 }

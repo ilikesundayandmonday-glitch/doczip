@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
+import { JsonLd, siteGraph } from "./structured-data";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zipperdoc.com"),
@@ -49,6 +50,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <JsonLd data={siteGraph} />
         <Nav />
         {children}
         <Footer />

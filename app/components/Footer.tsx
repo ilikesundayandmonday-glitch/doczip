@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SAFETY_LINE } from "@/app/structured-data";
 
 const TOOLS = [
   { href: "/compress", label: "사진·이미지 용량 줄이기" },
@@ -49,7 +50,10 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-sm text-[#8B968F] leading-relaxed">
-            파일이 서버로 전송되지 않습니다. 모든 처리는 브라우저 안에서 이루어집니다.
+            {SAFETY_LINE}{" "}
+            <Link href="/safety" className="text-[#4ADE80] hover:text-[#63E88A] transition">
+              왜 그런가요 →
+            </Link>
           </p>
           <p className="text-sm text-[#5F6B64] shrink-0">© 2026 ZipperDoc</p>
         </div>

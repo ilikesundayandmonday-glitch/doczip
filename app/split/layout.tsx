@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, toolApp } from "@/app/structured-data";
 
 export const metadata: Metadata = {
   title: "PDF 나누기 무료 | 페이지 분할·추출, 업로드 없이 - ZipperDoc",
@@ -20,5 +21,24 @@ export default function SplitLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <>
+      <JsonLd
+        data={toolApp({
+          name: "PDF 나누기 - ZipperDoc",
+          path: "/split",
+          description:
+            "PDF에서 원하는 페이지 범위만 추출하거나 한 장씩 낱개 파일로 나누는 무료 도구. 파일이 서버로 전송되지 않고 이용자의 브라우저 안에서 처리됩니다.",
+          featureList: [
+            "페이지 범위 지정 추출 (예: 1-3, 5, 8-10)",
+            "한 장씩 낱개 PDF로 분할",
+            "입력한 순서대로 페이지 재배치",
+            "파일 업로드 없이 브라우저에서 처리",
+            "무료, 설치 불필요, 회원가입 불필요",
+          ],
+        })}
+      />
+      {children}
+    </>
+  );
 }

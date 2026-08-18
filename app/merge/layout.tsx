@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, toolApp } from "@/app/structured-data";
 
 export const metadata: Metadata = {
   title: "PDF 합치기 무료 | 사진·JPG도 함께 병합 - ZipperDoc",
@@ -20,5 +21,25 @@ export default function MergeLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <>
+      <JsonLd
+        data={toolApp({
+          name: "PDF 합치기 - ZipperDoc",
+          path: "/merge",
+          description:
+            "여러 개의 PDF와 사진을 원하는 순서대로 하나의 PDF로 합치는 무료 도구. 파일이 서버로 전송되지 않고 이용자의 브라우저 안에서 처리됩니다. 설치와 회원가입이 필요 없습니다.",
+          featureList: [
+            "여러 PDF를 하나로 병합",
+            "JPG·PNG 사진을 PDF로 변환해 함께 병합",
+            "사진을 A4 크기에 맞춰 자동 정렬",
+            "순서 변경 가능",
+            "파일 업로드 없이 브라우저에서 처리",
+            "무료, 설치 불필요, 회원가입 불필요",
+          ],
+        })}
+      />
+      {children}
+    </>
+  );
 }

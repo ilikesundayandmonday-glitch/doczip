@@ -1,6 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { openGraphBase } from "@/app/shared-metadata";
+import { JsonLd, faqPage } from "@/app/structured-data";
+
+const SAFETY_FAQ = [
+  { q: "변환한 파일이 컴퓨터에 남나요?", a: "변환하는 동안에는 브라우저 메모리에만 있고, 페이지를 닫으면 사라집니다. 다운로드한 결과 파일은 당연히 저장되니, 제출을 마쳤다면 필요 없는 파일은 정리하시면 됩니다." },
+  { q: "스마트폰에서도 똑같나요?", a: "같습니다. PC든 모바일이든 브라우저 안에서 처리되는 방식은 동일합니다. 다만 아주 큰 파일은 기기 성능에 따라 느려질 수 있습니다." },
+  { q: "회원가입은 왜 없나요?", a: "받을 이유가 없어서입니다. 파일을 저장하지 않으니 이용자를 구분할 필요가 없고, 구분할 필요가 없으니 개인정보를 받을 이유도 없습니다." },
+  { q: "무료인데 어떻게 운영되나요?", a: "파일이 서버를 거치지 않으니 운영비가 거의 들지 않습니다. 페이지를 내려주는 비용만 들기 때문에 무료로 열어둘 수 있습니다." },
+];
 
 export const metadata: Metadata = {
   title: "ZipperDoc이 안전한 이유 - 파일이 서버로 가지 않는 원리 | ZipperDoc",
@@ -19,6 +27,7 @@ export const metadata: Metadata = {
 export default function SafetyPage() {
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd data={faqPage(SAFETY_FAQ)} />
       <section className="bg-[#1C1F1D] px-6 py-20 sm:py-24">
         <div className="max-w-3xl mx-auto">
           <div className="text-xs tracking-[0.2em] text-[#4ADE80] font-medium mb-4">왜 안전한가</div>
