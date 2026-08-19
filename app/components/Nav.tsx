@@ -79,7 +79,7 @@ export default function Nav() {
             홈
           </Link>
 
-          <Link href="/compress" className={linkClass}>용량 줄이기</Link>
+          <Link href="/compress" className={linkClass}>서류 용량 줄이기</Link>
 
           <div
             ref={menuRef}
@@ -127,16 +127,18 @@ export default function Nav() {
             </div>
           </div>
 
-          <Link href="/guide" className={linkClass}>가이드</Link>
-          <Link href="/safety" className={linkClass}>안전한 이유</Link>
         </div>
 
-        <Link href="/" onClick={goHome} className="flex items-center gap-2 cursor-pointer shrink-0">
-          <Image src="/DOCZIPlogo.png" alt="ZipperDoc" width={38} height={38} className="rounded-lg" />
-          <span className="text-lg font-bold text-[#FAFBFA]">
-            Zipper<span className="text-[#4ADE80]">Doc</span>
-          </span>
-        </Link>
+        <div className="flex items-center gap-3 sm:gap-5 shrink-0">
+          <Link href="/" onClick={goHome} className="flex items-center gap-2 cursor-pointer shrink-0">
+            <Image src="/DOCZIPlogo.png" alt="ZipperDoc" width={38} height={38} className="rounded-lg" />
+            <span className="hidden sm:inline text-lg font-bold text-[#FAFBFA]">
+              Zipper<span className="text-[#4ADE80]">Doc</span>
+            </span>
+          </Link>
+
+          <Link href="/guide" className={linkClass}>ZipperDoc 사용 가이드</Link>
+        </div>
       </div>
     </nav>
   );

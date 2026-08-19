@@ -71,11 +71,25 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center shrink-0">
+              <div className="flex flex-col items-center shrink-0 w-full max-w-[260px]">
                 <Image src="/DOCZIPlogo.png" alt="ZipperDoc 로고" width={240} height={240} className="drop-shadow-[0_0_50px_rgba(74,222,128,0.4)]" priority />
                 <span className="mt-3 text-2xl font-bold text-[#FAFBFA] tracking-tight">
                   Zipper<span className="text-[#4ADE80]">Doc</span>
                 </span>
+
+                <Link
+                  href="/safety"
+                  onClick={() => track("히어로_안전_클릭")}
+                  className="group mt-5 w-full rounded-2xl border border-[#4ADE80]/30 bg-[#0F1310]/80 backdrop-blur-sm px-5 py-4 text-left hover:border-[#4ADE80]/60 hover:bg-[#0F1310] transition"
+                >
+                  <p className="text-[11px] tracking-[0.15em] text-[#4ADE80] font-medium mb-1.5">왜 안전한가</p>
+                  <p className="text-base font-bold text-[#FAFBFA] leading-snug mb-2">
+                    파일이 서버로<br />오지 않습니다
+                  </p>
+                  <span className="text-xs font-medium text-[#4ADE80] group-hover:text-[#63E88A] transition">
+                    원리 보기 →
+                  </span>
+                </Link>
               </div>
 
             </div>
