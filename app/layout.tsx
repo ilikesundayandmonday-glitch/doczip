@@ -6,7 +6,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
 import { JsonLd, siteGraph } from "./structured-data";
-import { openGraphBase, ogImage } from "./shared-metadata";
+import { openGraphBase } from "./shared-metadata";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zipperdoc.com"),
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     url: "https://zipperdoc.com",
     type: "website",
   },
+  // twitter 도 세그먼트 간 얕은 병합이라 여기에 title/description 을 두면
+  // 하위 페이지가 홈 문구를 그대로 물려받습니다. card 종류만 남기고
+  // 제목·설명·이미지는 각 페이지의 og 태그로 대체되게 둡니다.
   twitter: {
     card: "summary_large_image",
-    title: "PDF 합치기·용량 줄이기 무료 | ZipperDoc",
-    description: "파일이 서버로 전송되지 않습니다. 브라우저에서만 처리되어 민감한 서류도 안전하게.",
-    images: [ogImage.url],
   },
   other: {
     "google-adsense-account": "ca-pub-9595724629001821",
