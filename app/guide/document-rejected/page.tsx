@@ -61,13 +61,21 @@ export default function DocumentRejectedGuide() {
               업로드 자체가 막히거나, 올라가더라도 시스템에서 잘려 저장되는 경우가 있습니다. 스마트폰으로
               찍은 서류 사진은 한 장에 5~10MB를 넘는 일이 흔합니다.
             </p>
-            <p>
+            <p className="mb-3">
               <strong className="text-gray-900">해결:</strong>{" "}
               <Link href="/compress" className="text-[#1D9E75] font-medium underline">
                 이미지 용량을 줄인 뒤
               </Link>{" "}
               제출하세요. 다만 너무 세게 압축하면 글자가 뭉개져 다른 사유로 반려되니, 압축 후 계좌번호나
               사업자번호가 읽히는지 확인하는 과정을 꼭 거치세요.
+            </p>
+            <p>
+              예비창업패키지처럼 첨부파일 전체 합산 용량에 제한을 두는 사업도 있습니다. 파일 하나하나는
+              기준을 넘지 않아도 다 더하면 초과되는 경우가 있으니,{" "}
+              <Link href="/guide/pre-startup-package-checklist" className="text-[#1D9E75] font-medium underline">
+                예비창업패키지 체크리스트
+              </Link>
+              에서 관련 내용을 확인해보세요.
             </p>
           </section>
 
@@ -179,6 +187,10 @@ export default function DocumentRejectedGuide() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-4">관련 가이드</h2>
             <div className="flex flex-col gap-3">
+              <Link href="/guide/pre-startup-package-checklist" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">예비창업패키지 제출서류 체크리스트와 반려 피하는 법 →</p>
+                <p className="text-sm text-gray-500">이 사업에서 특히 자주 걸리는 반려 포인트 3가지</p>
+              </Link>
               <Link href="/guide/submission-checklist" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
                 <p className="font-bold text-gray-900 mb-1">정부지원사업 제출 서류 체크리스트 →</p>
                 <p className="text-sm text-gray-500">접수 전에 확인해야 할 항목을 순서대로 정리</p>
