@@ -159,6 +159,10 @@ export default function PreStartupPackageChecklistGuide() {
                 <p className="font-bold text-gray-900 mb-1">사업계획서 파일 용량 줄이는 법 →</p>
                 <p className="text-sm text-gray-500">제출 용량 제한을 맞추기 위해 용량을 줄이는 방법</p>
               </Link>
+              <Link href="/guide/youth-startup-academy-checklist" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">청년창업사관학교 제출서류 체크리스트 →</p>
+                <p className="text-sm text-gray-500">이미 사업을 시작했다면 이쪽 자격 요건도 확인하세요</p>
+              </Link>
             </div>
           </section>
         </div>

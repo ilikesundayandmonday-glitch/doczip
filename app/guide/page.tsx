@@ -148,6 +148,14 @@ export default function GuidePage() {
                 <p className="font-bold text-gray-900 mb-1">예비창업패키지 제출서류 체크리스트와 반려 피하는 법 →</p>
                 <p className="text-sm text-gray-500">이 사업에서 특히 자주 걸리는 반려 포인트 3가지</p>
               </Link>
+              <Link href="/guide/youth-startup-academy-checklist" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">청년창업사관학교 제출서류 체크리스트와 준비 방법 →</p>
+                <p className="text-sm text-gray-500">지원 자격과 실적 증빙 서류를 정리</p>
+              </Link>
+              <Link href="/guide/business-registration-certificate" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">사업자등록증명원 발급 방법과 제출 파일 만들기 →</p>
+                <p className="text-sm text-gray-500">정부24·홈택스에서 무료로 발급받는 법</p>
+              </Link>
               <Link href="/guide/file-safety" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
                 <p className="font-bold text-gray-900 mb-1">온라인 PDF 도구에 통장사본 올려도 될까? →</p>
                 <p className="text-sm text-gray-500">파일이 서버로 전송되는지 직접 확인하는 방법</p>
