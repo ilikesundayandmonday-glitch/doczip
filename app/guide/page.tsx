@@ -136,6 +136,18 @@ export default function GuidePage() {
                 <p className="font-bold text-gray-900 mb-1">사업계획서 파일 용량 줄이는 법 →</p>
                 <p className="text-sm text-gray-500">제출 용량 제한을 맞추기 위해 용량을 줄이는 방법</p>
               </Link>
+              <Link href="/guide/business-plan-writing" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">정부지원사업 사업계획서 작성법 (PSST 구조) →</p>
+                <p className="text-sm text-gray-500">문제인식부터 팀구성까지 항목별 작성 팁</p>
+              </Link>
+              <Link href="/guide/business-plan-mistakes" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">사업계획서, 형식은 맞는데 왜 떨어질까? →</p>
+                <p className="text-sm text-gray-500">서류 형식이 아니라 내용 자체가 문제인 7가지</p>
+              </Link>
+              <Link href="/guide/pt-evaluation" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">정부지원사업 발표평가(PT) 완벽 대비법 →</p>
+                <p className="text-sm text-gray-500">시간 배분, 질의응답, 비대면 발표 체크리스트</p>
+              </Link>
               <Link href="/guide/submission-checklist" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
                 <p className="font-bold text-gray-900 mb-1">정부지원사업 제출 서류 체크리스트 →</p>
                 <p className="text-sm text-gray-500">접수 전에 확인해야 할 항목을 순서대로 정리</p>

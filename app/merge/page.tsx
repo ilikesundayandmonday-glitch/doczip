@@ -230,15 +230,22 @@ export default function MergePage() {
             처리됩니다.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mb-4">파일은 어디로도 전송되지 않습니다</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">여러 장을 합쳐도 서버 밖에서 끝납니다</h2>
+          <p className="mb-4">
+            PDF와 사진을 몇 장을 올리든, 순서를 맞추고 하나로 묶는 작업은 전부 브라우저 메모리 안에서
+            처리됩니다. 서류 개수가 늘어난다고 서버로 보내는 방식으로 바뀌지 않습니다. 통장사본·사업자등록증처럼
+            여러 민감한 서류를 한꺼번에 다루는 도구라 이 점을 분명히 해두고 싶었습니다.
+          </p>
           <p>
-            통장사본처럼 민감한 서류를 온라인 도구에 올리는 것이 불안하실 수 있습니다. ZipperDoc의 합치기는
-            서버가 아니라 이용자의 브라우저 안에서 실행됩니다. 파일이 인터넷을 통해 업로드되는 과정 자체가
-            없으므로, 서버에 저장되거나 남을 파일이 존재하지 않습니다. 자세한 내용은{" "}
+            직접 파일이 오가는지 확인하는 방법은{" "}
+            <Link href="/guide/file-safety" className="text-[#1D9E75] underline">
+              온라인 PDF 도구에 통장사본 올려도 될까?
+            </Link>
+            에, 수집하는 정보의 범위는{" "}
             <Link href="/privacy" className="text-[#1D9E75] underline">
               개인정보처리방침
             </Link>
-            에서 확인하실 수 있습니다.
+            에 정리해두었습니다.
           </p>
         </div>
 

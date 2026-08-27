@@ -220,15 +220,18 @@ export default function CompressPage() {
             압축 효율까지 떨어집니다.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mb-4">파일은 어디로도 전송되지 않습니다</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">압축도 서버를 거치지 않습니다</h2>
           <p className="mb-4">
-            통장사본이나 신분증처럼 민감한 서류를 온라인 도구에 올리는 것이 불안하실 수 있습니다.
-            ZipperDoc의 압축은 서버가 아니라 이용자의 브라우저 안에서 실행됩니다. 파일이 인터넷을 통해
-            어디론가 업로드되는 과정 자체가 없기 때문에, 서버에 저장되거나 남을 파일이 존재하지 않습니다.
+            화질을 낮추는 계산 자체가 이용자의 브라우저 안에서 끝납니다. 원본 사진이든 압축한 결과든
+            인터넷을 통해 어디로도 전송되지 않으므로, 계좌번호가 그대로 찍힌 통장사본을 압축할 때도
+            서버에 남을 파일이 없습니다.
           </p>
           <p>
-            직접 확인하고 싶으시다면, 파일을 올린 뒤 인터넷 연결을 끊고 압축 버튼을 눌러보세요. 그대로
-            동작합니다. 자세한 내용은{" "}
+            어떤 구조라서 그런지, 그리고 직접 확인하는 방법은{" "}
+            <Link href="/safety" className="text-[#1D9E75] underline">
+              ZipperDoc이 안전한 이유
+            </Link>
+            에서, 수집하는 정보의 범위는{" "}
             <Link href="/privacy" className="text-[#1D9E75] underline">
               개인정보처리방침
             </Link>

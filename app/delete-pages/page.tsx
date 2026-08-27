@@ -224,13 +224,18 @@ export default function DeletePagesPage() {
             됩니다.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mb-4">파일은 어디로도 전송되지 않습니다</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">페이지를 지우는 것도 서버 밖에서</h2>
+          <p className="mb-4">
+            지울 페이지를 고르고 새 PDF를 만드는 과정 모두 브라우저 안에서 처리됩니다. 원본도, 지운
+            결과도 서버로 전송되지 않으니 스캔하다 생긴 빈 페이지 하나를 빼는 정도의 작업으로도 파일이
+            인터넷에 노출될 일은 없습니다.
+          </p>
           <p>
-            페이지를 지우는 작업은 서버가 아니라 이용자의 브라우저 안에서 실행됩니다. 파일이 인터넷을 통해
-            업로드되는 과정 자체가 없으므로, 서버에 저장되거나 남을 파일이 존재하지 않습니다. 이 페이지를
-            연 뒤 와이파이를 끄고 처리해보시면 그대로 동작하는 것을 확인하실 수 있습니다. 자세한 내용은{" "}
-            <Link href="/privacy" className="text-[#1D9E75] underline">개인정보처리방침</Link>에서 확인하실
-            수 있습니다.
+            어떤 원리인지 궁금하시면{" "}
+            <Link href="/safety" className="text-[#1D9E75] underline">ZipperDoc이 안전한 이유</Link>를,
+            수집하는 정보의 범위는{" "}
+            <Link href="/privacy" className="text-[#1D9E75] underline">개인정보처리방침</Link>을
+            참고하세요.
           </p>
         </div>
 

@@ -290,13 +290,18 @@ export default function SplitPage() {
             됩니다.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mb-4">파일은 어디로도 전송되지 않습니다</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">나누는 것도 서버를 거치지 않습니다</h2>
+          <p className="mb-4">
+            원하는 페이지만 뽑아내는 계산도 브라우저 안에서 끝납니다. 원본 파일을 서버에 올릴 필요가
+            없으니, 나누기 전이든 후든 파일이 인터넷을 지나가는 구간 자체가 생기지 않습니다.
+          </p>
           <p>
-            PDF를 나누는 작업은 서버가 아니라 이용자의 브라우저 안에서 실행됩니다. 파일이 인터넷을 통해
-            업로드되는 과정 자체가 없으므로, 서버에 저장되거나 남을 파일이 존재하지 않습니다. 이 페이지를
-            연 뒤 와이파이를 끄고 나눠보시면 그대로 동작하는 것을 확인하실 수 있습니다. 자세한 내용은{" "}
-            <Link href="/privacy" className="text-[#1D9E75] underline">개인정보처리방침</Link>에서 확인하실
-            수 있습니다.
+            이 페이지를 연 뒤 인터넷 연결을 끊고 나눠보시면 그대로 동작하는 것을 직접 확인하실 수
+            있습니다. 원리는{" "}
+            <Link href="/safety" className="text-[#1D9E75] underline">ZipperDoc이 안전한 이유</Link>에,
+            수집하는 정보의 범위는{" "}
+            <Link href="/privacy" className="text-[#1D9E75] underline">개인정보처리방침</Link>에서
+            확인하실 수 있습니다.
           </p>
         </div>
 
