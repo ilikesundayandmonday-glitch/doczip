@@ -148,6 +148,10 @@ export default function GuidePage() {
                 <p className="font-bold text-gray-900 mb-1">정부지원사업 발표평가(PT) 완벽 대비법 →</p>
                 <p className="text-sm text-gray-500">시간 배분, 질의응답, 비대면 발표 체크리스트</p>
               </Link>
+              <Link href="/guide/deadline-submission-tips" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">마감일 임박, 온라인 제출 오류 대처법 →</p>
+                <p className="text-sm text-gray-500">접속 폭주·전산 오류 대처법과 예방법</p>
+              </Link>
               <Link href="/guide/submission-checklist" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
                 <p className="font-bold text-gray-900 mb-1">정부지원사업 제출 서류 체크리스트 →</p>
                 <p className="text-sm text-gray-500">접수 전에 확인해야 할 항목을 순서대로 정리</p>
@@ -167,6 +171,14 @@ export default function GuidePage() {
               <Link href="/guide/business-registration-certificate" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
                 <p className="font-bold text-gray-900 mb-1">사업자등록증명원 발급 방법과 제출 파일 만들기 →</p>
                 <p className="text-sm text-gray-500">정부24·홈택스에서 무료로 발급받는 법</p>
+              </Link>
+              <Link href="/guide/tax-clearance-certificate" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">국세완납증명서·지방세완납증명서 발급 방법 →</p>
+                <p className="text-sm text-gray-500">홈택스·위택스에서 미리 발급받는 법</p>
+              </Link>
+              <Link href="/guide/small-business-policy-fund" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">소상공인 정책자금(소진공) 제출서류 준비법 →</p>
+                <p className="text-sm text-gray-500">부결 사유와 준비 순서를 함께 정리</p>
               </Link>
               <Link href="/guide/file-safety" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
                 <p className="font-bold text-gray-900 mb-1">온라인 PDF 도구에 통장사본 올려도 될까? →</p>
