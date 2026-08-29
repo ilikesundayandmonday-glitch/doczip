@@ -180,6 +180,14 @@ export default function GuidePage() {
                 <p className="font-bold text-gray-900 mb-1">소상공인 정책자금(소진공) 제출서류 준비법 →</p>
                 <p className="text-sm text-gray-500">부결 사유와 준비 순서를 함께 정리</p>
               </Link>
+              <Link href="/guide/employment-career-certificate" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">재직증명서·경력증명서 발급 및 PDF 준비법 →</p>
+                <p className="text-sm text-gray-500">회사 직접 발급, 정부24 발급, 폐업 시 대안까지</p>
+              </Link>
+              <Link href="/guide/standard-financial-statement" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
+                <p className="font-bold text-gray-900 mb-1">표준재무제표증명 발급 방법 →</p>
+                <p className="text-sm text-gray-500">홈택스 발급 절차와 발급 안 되는 경우</p>
+              </Link>
               <Link href="/guide/file-safety" className="block border border-gray-200 rounded-xl p-5 hover:border-[#1D9E75] hover:shadow-md transition">
                 <p className="font-bold text-gray-900 mb-1">온라인 PDF 도구에 통장사본 올려도 될까? →</p>
                 <p className="text-sm text-gray-500">파일이 서버로 전송되는지 직접 확인하는 방법</p>
