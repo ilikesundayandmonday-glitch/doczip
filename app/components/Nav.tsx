@@ -138,6 +138,7 @@ export default function Nav() {
           </Link>
 
           <Link href="/guide" className={linkClass}>ZipperDoc 사용 가이드</Link>
+          <Link href="/programs" className={linkClass}>지원사업 공고</Link>
         </div>
       </div>
     </nav>
