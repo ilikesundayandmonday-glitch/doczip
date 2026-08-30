@@ -5,6 +5,8 @@ import Link from "next/link";
 import { PDFDocument } from "pdf-lib";
 import { track } from "@vercel/analytics";
 
+const MAX_PDF_MB = 150;
+
 export default function DeletePagesPage() {
   const [file, setFile] = useState<File | null>(null);
   const [pageCount, setPageCount] = useState(0);
@@ -21,6 +23,10 @@ export default function DeletePagesPage() {
     const f = files[0];
     if (f.type !== "application/pdf") {
       alert("PDF 파일만 올릴 수 있어요.");
+      return;
+    }
+    if (f.size > MAX_PDF_MB * 1024 * 1024) {
+      alert(`파일이 너무 커요 (${MAX_PDF_MB}MB까지 가능). PDF 페이지 삭제나 나누기로 용량을 줄인 뒤 다시 시도해주세요.`);
       return;
     }
     try {

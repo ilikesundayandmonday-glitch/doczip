@@ -5,6 +5,8 @@ import Link from "next/link";
 import imageCompression from "browser-image-compression";
 import { track } from "@vercel/analytics";
 
+const MAX_IMAGE_MB = 50;
+
 export default function CompressPage() {
   const [originalFile, setOriginalFile] = useState<File | null>(null);
   const [compressedFile, setCompressedFile] = useState<File | null>(null);
@@ -13,13 +15,17 @@ export default function CompressPage() {
   const [dragging, setDragging] = useState(false);
 
   const selectFile = (file: File) => {
-    if (file && file.type.startsWith("image/")) {
-      setOriginalFile(file);
-      setCompressedFile(null);
-      track("압축_파일올림");
-    } else {
+    if (!file.type.startsWith("image/")) {
       alert("이미지 파일만 올릴 수 있어요.");
+      return;
     }
+    if (file.size > MAX_IMAGE_MB * 1024 * 1024) {
+      alert(`파일이 너무 커요 (${MAX_IMAGE_MB}MB까지 가능). 스마트폰 카메라 설정에서 해상도를 낮춰 다시 촬영하거나, 더 작은 사진으로 시도해주세요.`);
+      return;
+    }
+    setOriginalFile(file);
+    setCompressedFile(null);
+    track("압축_파일올림");
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

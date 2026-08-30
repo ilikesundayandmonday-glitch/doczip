@@ -10,6 +10,8 @@ type Item = { file: File; id: string; kind: "pdf" | "image" };
 const A4_WIDTH = 595.28;
 const A4_HEIGHT = 841.89;
 const MARGIN = 40;
+const MAX_FILE_MB = 50;
+const MAX_TOTAL_MB = 150;
 
 export default function MergePage() {
   const [items, setItems] = useState<Item[]>([]);
@@ -19,17 +21,34 @@ export default function MergePage() {
   const addFiles = (files: FileList | null) => {
     if (!files) return;
     const accepted: Item[] = [];
+    const tooLarge: string[] = [];
     Array.from(files).forEach((f) => {
-      if (f.type === "application/pdf") {
-        accepted.push({ file: f, id: Math.random().toString(36).slice(2), kind: "pdf" });
-      } else if (f.type === "image/jpeg" || f.type === "image/png") {
-        accepted.push({ file: f, id: Math.random().toString(36).slice(2), kind: "image" });
+      const isPdf = f.type === "application/pdf";
+      const isImage = f.type === "image/jpeg" || f.type === "image/png";
+      if (!isPdf && !isImage) return;
+      if (f.size > MAX_FILE_MB * 1024 * 1024) {
+        tooLarge.push(f.name);
+        return;
       }
+      accepted.push({ file: f, id: Math.random().toString(36).slice(2), kind: isPdf ? "pdf" : "image" });
     });
+
+    if (tooLarge.length > 0) {
+      alert(`다음 파일은 ${MAX_FILE_MB}MB를 넘어서 올릴 수 없어요: ${tooLarge.join(", ")}\n용량 줄이기로 먼저 압축한 뒤 다시 시도해주세요.`);
+    }
+
     if (accepted.length === 0) {
-      alert("PDF, JPG, PNG 파일만 올릴 수 있어요.");
+      if (tooLarge.length === 0) alert("PDF, JPG, PNG 파일만 올릴 수 있어요.");
       return;
     }
+
+    const currentTotal = items.reduce((sum, it) => sum + it.file.size, 0);
+    const newTotal = accepted.reduce((sum, it) => sum + it.file.size, 0);
+    if (currentTotal + newTotal > MAX_TOTAL_MB * 1024 * 1024) {
+      alert(`한 번에 합칠 수 있는 전체 용량은 ${MAX_TOTAL_MB}MB까지예요. 파일 수를 줄이거나 나눠서 합쳐주세요.`);
+      return;
+    }
+
     setItems((prev) => [...prev, ...accepted]);
     track("합치기_파일올림");
   };
