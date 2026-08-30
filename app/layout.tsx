@@ -10,15 +10,15 @@ import { openGraphBase } from "./shared-metadata";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zipperdoc.com"),
-  title: "PDF 합치기·용량 줄이기 무료 | 파일 업로드 없이 - ZipperDoc",
-  description: "PDF 합치기, PDF 용량 줄이기, 사진 PDF 변환을 무료로. 파일이 서버에 업로드되지 않고 브라우저에서만 처리되어 통장사본·신분증 같은 민감한 서류도 안전합니다. 설치·회원가입 없음.",
-  keywords: ["PDF 합치기", "PDF 용량 줄이기", "사진 용량 줄이기", "JPG PDF 변환", "PDF 병합", "이미지 용량 줄이기", "통장사본 PDF", "정부지원사업 서류"],
+  title: "PDF 합치기·사진 용량 줄이기 무료 | 파일 업로드 없이 - ZipperDoc",
+  description: "PDF 합치기, 사진·이미지 용량 줄이기, 사진 PDF 변환을 무료로. 파일이 서버에 업로드되지 않고 브라우저에서만 처리되어 통장사본·신분증 같은 민감한 서류도 안전합니다. 설치·회원가입 없음.",
+  keywords: ["PDF 합치기", "사진 용량 줄이기", "JPG PDF 변환", "PDF 병합", "이미지 용량 줄이기", "통장사본 PDF", "정부지원사업 서류"],
   alternates: {
     canonical: "/",
   },
   openGraph: {
     ...openGraphBase,
-    title: "PDF 합치기·용량 줄이기 무료 | ZipperDoc",
+    title: "PDF 합치기·사진 용량 줄이기 무료 | ZipperDoc",
     description: "파일이 서버로 전송되지 않습니다. 브라우저에서만 처리되어 민감한 서류도 안전하게.",
     url: "https://zipperdoc.com",
     type: "website",

@@ -98,13 +98,13 @@ export default function Home() {
         <div className="relative z-10 border-t border-white/10 bg-black/20 backdrop-blur-sm py-3 overflow-hidden whitespace-nowrap">
           <div className="inline-block animate-[scroll_20s_linear_infinite] text-sm text-[#8B968F]">
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 합치기</span>
-            <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 용량 줄이기</span>
+            <span className="mx-5"><span className="text-[#4ADE80]">●</span> 사진·이미지 용량 줄이기</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 나누기</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 페이지 삭제</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> 사진 PDF 변환</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> 통장사본·사업자등록증 정리</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 합치기</span>
-            <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 용량 줄이기</span>
+            <span className="mx-5"><span className="text-[#4ADE80]">●</span> 사진·이미지 용량 줄이기</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 나누기</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> PDF 페이지 삭제</span>
             <span className="mx-5"><span className="text-[#4ADE80]">●</span> 사진 PDF 변환</span>

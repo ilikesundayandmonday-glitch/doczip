@@ -16,9 +16,13 @@ const GUIDES = [
 ];
 
 const ABOUT = [
+  { href: "/about", label: "운영자 소개" },
   { href: "/safety", label: "ZipperDoc이 안전한 이유" },
   { href: "/guide", label: "서류 제출 가이드 전체" },
+  { href: "/contact", label: "문의하기" },
+  { href: "/terms", label: "이용약관" },
   { href: "/privacy", label: "개인정보처리방침" },
+  { href: "/editorial-policy", label: "콘텐츠 작성 기준" },
 ];
 
 function Column({ title, items }: { title: string; items: { href: string; label: string }[] }) {
