@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { track } from "@vercel/analytics";
 import WaveBackground from "./components/WaveBackground";
+import ChecklistRevisitBanner from "./components/ChecklistRevisitBanner";
 import { JsonLd, faqPage } from "./structured-data";
 
 const HOME_FAQ = [
@@ -112,6 +113,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ChecklistRevisitBanner />
 
       <section id="tools" className="px-6 py-24 max-w-4xl mx-auto w-full">
         <div className="text-xs tracking-[0.2em] text-[#1D9E75] font-medium mb-2">지금 쓸 수 있는 도구</div>

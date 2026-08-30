@@ -6,6 +6,7 @@ const TOOLS = [
   { href: "/merge", label: "PDF 합치기" },
   { href: "/split", label: "PDF 나누기" },
   { href: "/delete-pages", label: "PDF 페이지 삭제" },
+  { href: "/checklist", label: "준비 체크리스트" },
 ];
 
 const GUIDES = [
