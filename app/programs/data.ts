@@ -17,6 +17,7 @@ export type Program = {
   budget: string;
   deadline: string;
   guideHref?: string;
+  sourceUrl?: string; // 실제 API에서 가져온 공고의 원문 링크 (있으면 실제 데이터, 없으면 예시 데이터)
 };
 
 export const SAMPLE_PROGRAMS: Program[] = [

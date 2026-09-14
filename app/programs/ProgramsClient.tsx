@@ -2,19 +2,19 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { CATEGORIES, STAGES, SAMPLE_PROGRAMS, type ProgramCategory, type ProgramStage } from "./data";
+import { CATEGORIES, STAGES, type Program, type ProgramCategory, type ProgramStage } from "./data";
 
-export default function ProgramsClient() {
+export default function ProgramsClient({ programs }: { programs: Program[] }) {
   const [category, setCategory] = useState<ProgramCategory | "전체">("전체");
   const [stage, setStage] = useState<ProgramStage | "전체">("전체");
 
   const filtered = useMemo(() => {
-    return SAMPLE_PROGRAMS.filter((p) => {
+    return programs.filter((p) => {
       if (category !== "전체" && p.category !== category) return false;
       if (stage !== "전체" && p.stage !== stage) return false;
       return true;
     });
-  }, [category, stage]);
+  }, [programs, category, stage]);
 
   const chipClass = (active: boolean) =>
     `px-3 py-1.5 rounded-full text-sm font-medium border transition ${
@@ -58,9 +58,11 @@ export default function ProgramsClient() {
           <div key={p.id} className="border border-gray-200 rounded-2xl p-5 flex flex-col gap-3">
             <div className="flex items-start justify-between gap-2">
               <h3 className="font-bold text-gray-900 leading-snug">{p.title}</h3>
-              <span className="shrink-0 text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-600 border border-amber-200">
-                예시
-              </span>
+              {!p.sourceUrl && (
+                <span className="shrink-0 text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-600 border border-amber-200">
+                  예시
+                </span>
+              )}
             </div>
             <p className="text-sm text-gray-500">{p.agency}</p>
             <p className="text-sm text-gray-700 leading-relaxed">{p.summary}</p>
@@ -78,7 +80,7 @@ export default function ProgramsClient() {
 
             <div className="flex flex-wrap gap-2 mt-2">
               <a
-                href={p.category === "금융" ? "https://www.bizinfo.go.kr" : "https://www.k-startup.go.kr"}
+                href={p.sourceUrl || (p.category === "금융" ? "https://www.bizinfo.go.kr" : "https://www.k-startup.go.kr")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-700 hover:border-[#1D9E75] hover:text-[#1D9E75] transition"
