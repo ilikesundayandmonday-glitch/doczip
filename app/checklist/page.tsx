@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: "정부지원사업 제출서류 준비 상태를 체크리스트로 관리하세요. 회원가입 없이 이 브라우저에만 저장됩니다.",
   keywords: ["지원사업 체크리스트", "제출서류 준비", "서류 준비 체크리스트", "정부지원사업 서류"],
   alternates: { canonical: "/checklist" },
+  robots: { index: false, follow: false },
   openGraph: {
     ...openGraphBase,
     title: "지원사업 준비 체크리스트 | ZipperDoc",

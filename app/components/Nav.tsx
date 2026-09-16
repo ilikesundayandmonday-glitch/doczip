@@ -138,7 +138,6 @@ export default function Nav() {
           </Link>
 
           <Link href="/programs" className={linkClass}>지원사업 공고</Link>
-          <Link href="/checklist" className={linkClass}>준비 체크리스트</Link>
         </div>
       </div>
     </nav>
